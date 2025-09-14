@@ -31,9 +31,11 @@ export default function Home() {
         </span>
         </h1>
         <a
-          href="#what"
+          href="https://www.instagram.com/kevinburrafato/"
           className="absolute bottom-10 text-black hover:text-black/60 transition"
-          aria-label="Scorri verso Cosa faccio"
+          aria-label="Vai al mio profilo Instagram"
+          target="_blank"
+          rel="noopener noreferrer"
         >
           <Instagram size={32} />
         </a>

@@ -22,11 +22,11 @@ export default function Home() {
             }}
             onInit={(typewriter) => {
               typewriter
-                .typeString('Vivere piuttosto che capire')
-                .pauseFor(1500)
+                .typeString('Vivere piuttosto che capire.')
+                .pauseFor(2500)
                 .deleteAll()
-                .typeString('Osservare piuttosto che giudicare')
-                .pauseFor(1500)
+                .typeString('Vivere piuttosto che capire.')
+                .pauseFor(2500)
                 .deleteAll()
                 .start();
             }}

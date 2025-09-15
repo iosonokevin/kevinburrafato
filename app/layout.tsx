@@ -10,7 +10,7 @@ const montserrat = Montserrat({
 
 export const metadata: Metadata = {
   title: "Kevin Burrafato",
-  description: "Accompagno chi vuole conoscersi in profondità.",
+  description: "Archeologo di me stesso.",
   verification: { google: "dWAiRPtDpjTQ3Z_sOJW8lrwrftW3bRkgUz0-b1qbpXs" },
 };
 

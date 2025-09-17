@@ -17,16 +17,16 @@ export default function Home() {
             <Typewriter
               options={{
                 loop: true,
-                delay: 50,
+                delay: 40,
                 deleteSpeed: 50,
               }}
               onInit={(typewriter) => {
                 typewriter
                   .typeString('Vivere piuttosto che capire.')
-                  .pauseFor(2500)
+                  .pauseFor(1500)
                   .deleteAll()
-                  .typeString('Vivere piuttosto che capire.')
-                  .pauseFor(2500)
+                  .typeString('Trascendere e Includere.')
+                  .pauseFor(1500)
                   .deleteAll()
                   .start();
               }}

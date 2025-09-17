@@ -17,7 +17,7 @@ export default function Home() {
             <Typewriter
               options={{
                 loop: true,
-                delay: 75,
+                delay: 50,
                 deleteSpeed: 50,
               }}
               onInit={(typewriter) => {

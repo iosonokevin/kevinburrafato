@@ -12,7 +12,7 @@ export default function Home() {
         id="hero"
         className="h-[100dvh] flex flex-col items-center justify-center px-8 sm:px-20 text-center space-y-6 relative"
       >
-        <h1 className="text-1xl sm:text-3xl">
+        <h1 className="text-2xl sm:text-3xl">
           <span className="inline-flex items-center space-x-2">
             <Typewriter
               options={{

@@ -1,6 +1,6 @@
 'use client';
 
-import { Instagram, Mail } from 'lucide-react'; // Mail per Substack
+import { Instagram, Mail } from 'lucide-react';
 import React from "react"; 
 import Typewriter from 'typewriter-effect';
 
@@ -12,7 +12,7 @@ export default function Home() {
         id="hero"
         className="h-[100dvh] flex flex-col items-center justify-center px-8 sm:px-20 text-center space-y-6 relative"
       >
-        <h1 className="text-2xl sm:text-3xl">
+        <h1 className="text-1xl sm:text-3xl">
           <span className="inline-flex items-center space-x-2">
             <Typewriter
               options={{
@@ -23,10 +23,10 @@ export default function Home() {
               onInit={(typewriter) => {
                 typewriter
                   .typeString('Vivere piuttosto che capire.')
-                  .pauseFor(1500)
+                  .pauseFor(1000)
                   .deleteAll()
-                  .typeString('Trascendere e Includere.')
-                  .pauseFor(1500)
+                  .typeString('Osservare piuttosto che giudicare.')
+                  .pauseFor(1000)
                   .deleteAll()
                   .start();
               }}
@@ -34,7 +34,6 @@ export default function Home() {
           </span>
         </h1>
 
-        {/* Contenitore icone */}
         <div className="absolute bottom-10 flex space-x-6">
           <a
             href="https://www.instagram.com/kevinburrafato/"

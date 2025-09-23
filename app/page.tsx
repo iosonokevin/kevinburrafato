@@ -8,8 +8,9 @@ import ButtonLink from '../components/PrimaryButton';
 
 const sentencesZeroSection = [
   "Respiro.",
-  "All'andare via resto.",
-  "Resto in contatto.",
+  "Sento il corpo che poggia.",
+  "Lascio andare il voler capire.",
+  "Resto."
 ];
 
 const sentencesPauseSection = [
@@ -90,10 +91,13 @@ export default function Home() {
               onInit={(typewriter) => {
                 typewriter
                   .typeString('Vivere piuttosto che capire.')
-                  .pauseFor(1000)
+                  .pauseFor(500)
                   .deleteAll()
                   .typeString('Osservare piuttosto che giudicare.')
-                  .pauseFor(1500)
+                  .pauseFor(500)
+                  .deleteAll()
+                  .typeString('Intento piuttosto che obiettivo.')
+                  .pauseFor(500)
                   .deleteAll()
                   .start();
               }}

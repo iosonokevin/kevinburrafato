@@ -9,8 +9,8 @@ const libreBaskerville = Libre_Baskerville({
 });
 
 export const metadata: Metadata = {
-  title: "Kevin Burrafato",
-  description: "Archeologo di me stesso. Counselor transpersonale. Accompagno chi vuole conoscersi in profondità.",
+  title: "Kevin Burrafato - Archeologo di me stesso",
+  description: "Counselor transpersonale. Accompagno chi vuole conoscersi in profondità.",
   verification: { google: "dWAiRPtDpjTQ3Z_sOJW8lrwrftW3bRkgUz0-b1qbpXs" },
 };
 

@@ -148,7 +148,7 @@ export default function Home() {
           viewport={{ once: true, amount: 0.6 }}
           transition={{ duration: 1, delay: sentencesZeroSection.length * 1 }}
         >
-          <span className="mb-1 text-sm whitespace-nowrap">Io sento</span>
+          <span className="mb-1 mr-2 text-sm whitespace-nowrap">Io sento</span>
           <MoveDown size={32} />
         </motion.a>
       </section>
@@ -186,7 +186,7 @@ export default function Home() {
             }
             transition={{ duration: 0.8 }}
           >
-            <span className="mb-1 text-sm whitespace-nowrap">Io resto</span>
+            <span className="mb-1 mr-1 text-sm whitespace-nowrap">Io resto</span>
             <MoveDown size={32} />
           </motion.a>
         </div>
@@ -221,7 +221,7 @@ export default function Home() {
           viewport={{ once: true, amount: 0.6 }}
           transition={{ duration: 1, delay: sentencesPauseSection.length * 1 }}
         >
-          <span className="mb-1 text-sm whitespace-nowrap">Io espando</span>
+          <span className="mb-1 mr-1 text-sm whitespace-nowrap">Io espando</span>
           <MoveDown size={32} />
         </motion.a>
       </section>
@@ -259,7 +259,7 @@ export default function Home() {
             }
             transition={{ duration: 0.8 }}
           >
-            <span className="mb-1 text-sm whitespace-nowrap">Io respiro</span>
+            <span className="mb-1 mr-1 text-sm whitespace-nowrap">Io respiro</span>
             <MoveDown size={32} />
           </motion.a>
         </div>
@@ -294,7 +294,7 @@ export default function Home() {
           viewport={{ once: true, amount: 0.6 }}
           transition={{ duration: 1, delay: sentencesZeroSection.length * 1 }}
         >
-          <span className="mb-1 text-sm whitespace-nowrap">Io vedo</span>
+          <span className="mb-1 mr-1 text-sm whitespace-nowrap">Io vedo</span>
           <MoveDown size={32} />
         </motion.a>
       </section>
@@ -332,7 +332,7 @@ export default function Home() {
             }
             transition={{ duration: 0.8 }}
           >
-            <span className="mb-1 text-sm whitespace-nowrap">Io mi osservo</span>
+            <span className="mb-1 mr-1 text-sm whitespace-nowrap">Io mi osservo</span>
             <MoveDown size={32} />
           </motion.a>
         </div>
@@ -346,8 +346,8 @@ export default function Home() {
         <motion.button
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.6 }}
-          transition={{ duration: 1, delay: 0.6 }}
+          viewport={{ once: true, amount: 0.4 }}
+          transition={{ duration: 0.4, delay: 0.4 }}
         >
           <ButtonLink
             text="Voglio parlare con Kevin"

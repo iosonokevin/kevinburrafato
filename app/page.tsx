@@ -39,6 +39,14 @@ export default function Home() {
         ' ',
       ];
       if (keysToBlock.includes(e.key)) {
+        const active = document.activeElement;
+      const isTyping =
+        active && (active.tagName === 'INPUT' || active.tagName === 'TEXTAREA');
+
+        if (e.key === ' ' && isTyping) {
+          return;
+        }
+
         e.preventDefault();
       }
     };

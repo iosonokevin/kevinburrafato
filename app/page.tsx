@@ -26,7 +26,6 @@ export default function Home() {
 
   const scrollContainerRef = useRef(null);
 
-  // blocca tasti di scroll
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       const keysToBlock = [
@@ -57,7 +56,6 @@ export default function Home() {
     };
   }, []);
 
-  // scroll programmato solo via click
   const scrollToSection = (id: string) => {
     const target = document.getElementById(id);
     if (target) {
@@ -65,7 +63,7 @@ export default function Home() {
       try {
         history.replaceState(null, '', `#${id}`);
       } catch {
-        // ignora errori
+        
       }
     }
   };
@@ -105,6 +103,9 @@ export default function Home() {
                   .pauseFor(500)
                   .deleteAll()
                   .typeString('Intento piuttosto che obiettivo.')
+                  .pauseFor(500)
+                  .deleteAll()
+                  .typeString('Affidarsi piuttosto che controllare.')
                   .pauseFor(500)
                   .deleteAll()
                   .start();

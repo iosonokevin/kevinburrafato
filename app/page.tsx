@@ -6,6 +6,15 @@ import Typewriter from 'typewriter-effect';
 import { motion } from 'framer-motion';
 import ButtonLink from '../components/PrimaryButton';
 
+const whatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER;
+
+const whatsappMessage = encodeURIComponent(
+  process.env.NEXT_PUBLIC_WHATSAPP_MESSAGE || ""
+);
+
+const whatsappLink = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
+
+
 const sentencesZeroSection = [
   "Respiro.",
   "Sento il corpo che poggia.",
@@ -17,6 +26,13 @@ const sentencesPauseSection = [
   "Respiro.",
   "All'andare via resto.",
   "Resto in contatto.",
+];
+
+const sentencesContactSection = [
+  "Ora ho una consapevolezza in più.",
+  "Ho superato una soglia.",
+  "Posso tornare qui tutte le volte che voglio.",
+  "E se voglio"
 ];
 
 export default function Home() {
@@ -99,13 +115,10 @@ export default function Home() {
                   .typeString('Vivere piuttosto che capire.')
                   .pauseFor(500)
                   .deleteAll()
-                  .typeString('Osservare piuttosto che giudicare.')
+                  .typeString('Ho paura, eppure, ho fiducia.')
                   .pauseFor(500)
                   .deleteAll()
                   .typeString('Intento piuttosto che obiettivo.')
-                  .pauseFor(500)
-                  .deleteAll()
-                  .typeString('Affidarsi piuttosto che controllare.')
                   .pauseFor(500)
                   .deleteAll()
                   .start();
@@ -352,17 +365,38 @@ export default function Home() {
         id="iobservemyself"
         className="h-[100dvh] snap-start flex flex-col items-center justify-center px-8 sm:px-20 text-center space-y-6 relative"
       >
-        <motion.button
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.4 }}
-          transition={{ duration: 0.4, delay: 0.4 }}
-        >
-          <ButtonLink
-            text="Voglio parlare con Kevin"
-            href="https://www.instagram.com/kevinburrafato/"
-          />
-        </motion.button>
+        <div className="flex flex-col items-center justify-center h-full space-y-10">
+
+          {/* Frasi */}
+          {sentencesContactSection.map((text, index) => (
+            <motion.p
+              key={index}
+              className="text-xl sm:text-2xl font-light"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.6 }}
+              transition={{ duration: 0.8, delay: index * 1 }}
+            >
+              {text}
+            </motion.p>
+          ))}
+
+          {/* Pulsante come “ultima frase” */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.6 }}
+            transition={{
+              duration: 0.8,
+              delay: sentencesZeroSection.length * 1,
+            }}
+          >
+            <ButtonLink
+              text="Parlo con Kevin"
+              href={whatsappLink}
+            />
+          </motion.div>
+        </div>
       </section>
     </div>
   );

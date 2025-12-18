@@ -14,6 +14,9 @@ html {
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+
+  --font-biro: var(--font-biro);
+  --font-courier: var(--font-courier);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -23,8 +26,21 @@ html {
   }
 }
 
+@layer utilities {
+  /* Nasconde la scrollbar per Chrome, Safari e Opera */
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Nasconde la scrollbar per IE, Edge e Firefox */
+  .scrollbar-hide {
+    -ms-overflow-style: none;  /* IE e Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-courier), ui-monospace, monospace;
 }

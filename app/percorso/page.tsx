@@ -1,17 +1,17 @@
 'use client';
 
 import React, { useState } from 'react';
-import ButtonLink from '../components/PrimaryButton';
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import Header from '@/components/Header';
-import SidebarMenu from '../components/SidebarMenu';
-import Image from 'next/image';
+import SidebarMenu from '@/components/SidebarMenu';
+import ButtonLink from '@/components/PrimaryButton';
 
-export default function Home() {
+export default function Percorso() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  
+
   return (
-    <main className="h-screen">      
+    <main className="h-screen">     
       <section
         className="snap-start h-screen relative flex flex-col items-center overflow-hidden bg-transparent"
         style={{ height: '90vh' }}
@@ -33,16 +33,15 @@ export default function Home() {
           />
         </div>
         <SidebarMenu isOpen={isMenuOpen} toggleMenu={() => setIsMenuOpen(false)} />
-        <div className="relative z-20 flex flex-col items-center justify-center flex-grow gap-6 px-4">
-          <h1 className="hero-title text-2xl md:text-3xl tracking-widest">
-            Vivere piuttosto che capire
-          </h1>   
+        <div className="relative z-20 flex flex-col items-center justify-center flex-grow gap-2 px-6">  
+          <h1 className="hero-title text-3xl tracking-widest max-w-[85%] md:max-w-2xl text-center mx-auto mb-1">
+            Il percorso di counseling
+          </h1>
           <h2 className="hero-title text-lg italic tracking-widest max-w-[85%] md:max-w-2xl text-center mx-auto">
-            Scavare nelle profondità, riportare alla luce ciò che chiede spazio.
-          </h2>  
-          <ButtonLink text={'Scrivimi'} href={'/contattami'} variant="white"/>
-        </div>    
-      </section>
+            Un viaggio guidato per esplorare se stessi, ritrovare forza, direzione e autenticità
+          </h2>
+        </div>     
+      </section>   
       <section
         className="snap-start h-[80vh] md:h-screen relative flex flex-col items-center justify-center overflow-hidden bg-transparent"
         style={{ backgroundColor: '#F5F7F0' }}
@@ -51,7 +50,7 @@ export default function Home() {
           <div className="flex flex-col items-center justify-center px-6 md:px-20 w-full">
             <div className="max-w-2xl flex flex-col items-center md:items-start text-center md:text-left">             
               <h1 className="text-2xl md:text-1xl tracking-widest mb-3">
-                A volte non serve capire di più.
+                Un percorso di esplorazione interiore
               </h1>
               <div className="space-y-4 mb-4">
                 <motion.p
@@ -60,30 +59,22 @@ export default function Home() {
                   transition={{ duration: 0.5, delay: 0.3 }}
                   viewport={{ once: true }}
                 >
-                  Serve fermarsi.
-                </motion.p>                
+                  Questo percorso è uno spazio di ascolto e presenza, dedicato a chi sente il bisogno di fare chiarezza, ritrovare direzione, riconnettersi a parti profonde di sé.
+                </motion.p>                 
                 <motion.p
                   initial={{ opacity: 0, y: 10 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 0.3 }}
                   viewport={{ once: true }}
                 >
-                  Ascoltare cosa sta chiedendo spazio dentro di noi.
-                </motion.p>               
+                  Non si tratta di risolvere qualcosa, ma di esplorare ciò che è già presente.
+                </motion.p>              
               </div>
-              <motion.div
-                initial={{ opacity: 0, y: 10 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.5 }}
-                viewport={{ once: true }}
-              >
-                <ButtonLink text={'Prenditi un momento'} href={'/faccio-lo-zero'}/>
-              </motion.div>
             </div>
           </div>
           <div className="hidden md:block"></div>        
         </div>
-      </section>   
+      </section>
       <section
         className="snap-start h-[80vh] md:h-screen relative flex flex-col items-center justify-center overflow-hidden bg-transparent"
         style={{ backgroundColor: '#E6E2D3' }}
@@ -93,7 +84,7 @@ export default function Home() {
           <div className="flex flex-col items-center justify-center px-6 md:px-20 w-full">
             <div className="max-w-2xl flex flex-col items-center md:items-start text-center md:text-left">             
               <h1 className="text-2xl md:text-1xl tracking-widest mb-3 leading-tight">
-                Il percorso è un processo, non una risposta.
+                Rivolto a chi sente una chiamata
               </h1>
               <div className="space-y-4 mb-4">
                 <motion.p
@@ -102,7 +93,7 @@ export default function Home() {
                   transition={{ duration: 0.5, delay: 0.3 }}
                   viewport={{ once: true }}
                 >
-                  Accompagno le persone a tornare in ascolto di ciò che già esiste dentro di loro.
+                  A chi attraversa momenti di confusione, di passaggio o di cambiamento.
                 </motion.p>
                 <motion.p
                   initial={{ opacity: 0, y: 10 }}
@@ -110,17 +101,17 @@ export default function Home() {
                   transition={{ duration: 0.5, delay: 0.3 }}
                   viewport={{ once: true }}
                 >
-                  Il corpo, il sentire, le immagini interiori diventano strumenti di orientamento.
+                  A chi sente che qualcosa dentro chiede attenzione, anche senza sapere ancora cosa.
+                </motion.p>
+                <motion.p
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.3 }}
+                  viewport={{ once: true }}
+                >
+                  Non è necessario avere un problema preciso, basta il desiderio di ascoltarsi.
                 </motion.p>
               </div>
-              <motion.div
-                initial={{ opacity: 0, y: 10 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.5 }}
-                viewport={{ once: true }}
-              >
-                <ButtonLink text={'Scopri il percorso'} href={'/percorso'}/>
-              </motion.div>
             </div>
           </div>
         </div>
@@ -133,7 +124,41 @@ export default function Home() {
           <div className="flex flex-col items-center justify-center px-6 md:px-20 w-full">
             <div className="max-w-2xl flex flex-col items-center md:items-start text-center md:text-left">             
               <h1 className="text-2xl md:text-1xl tracking-widest mb-3">
-                Due parole su di me.
+                Cosa questo percorso non è
+              </h1>
+              <div className="space-y-4 mb-4">               
+                <motion.p
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.3 }}
+                  viewport={{ once: true }}
+                >
+                  Non è un percorso standardizzato di terapia.
+                </motion.p>  
+                <motion.p
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.3 }}
+                  viewport={{ once: true }}
+                >
+                  Non sostituisce percorsi medici o psicoterapeutici, ma può affiancarsi come spazio di consapevolezza e crescita personale.
+                </motion.p>              
+              </div>
+            </div>
+          </div>
+          <div className="hidden md:block"></div>        
+        </div>
+      </section>
+      <section
+        className="snap-start h-[80vh] md:h-screen relative flex flex-col items-center justify-center overflow-hidden bg-transparent"
+        style={{ backgroundColor: '#E6E2D3' }}
+      >
+        <div className="relative z-20 w-full h-full flex flex-col items-center justify-center md:grid md:grid-cols-2">
+          <div className="hidden md:block"></div>
+          <div className="flex flex-col items-center justify-center px-6 md:px-20 w-full">
+            <div className="max-w-2xl flex flex-col items-center md:items-start text-center md:text-left">             
+              <h1 className="text-2xl md:text-1xl tracking-widest mb-3 leading-tight">
+                Cosa può accadere
               </h1>
               <div className="space-y-4 mb-4">
                 <motion.p
@@ -142,7 +167,47 @@ export default function Home() {
                   transition={{ duration: 0.5, delay: 0.3 }}
                   viewport={{ once: true }}
                 >
-                  Mi chiamo Kevin Burrafato.
+                  Durante il percorso possono emergere emozioni, immagini, intuizioni o movimenti interiori.
+                </motion.p>
+                <motion.p
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.3 }}
+                  viewport={{ once: true }}
+                >
+                  Spesso si apre uno spazio di maggiore chiarezza, di contatto con le proprie risorse e di riconnessione con ciò che è autentico.
+                </motion.p>
+                <motion.p
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.3 }}
+                  viewport={{ once: true }}
+                >
+                  Non c’è un risultato da raggiungere, ma un processo da attraversare.
+                </motion.p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section
+        className="snap-start h-[80vh] md:h-screen relative flex flex-col items-center justify-center overflow-hidden bg-transparent"
+        style={{ backgroundColor: '#F5F7F0' }}
+      >
+        <div className="relative z-20 w-full h-full flex flex-col items-center justify-center md:grid md:grid-cols-2">
+          <div className="flex flex-col items-center justify-center px-6 md:px-20 w-full">
+            <div className="max-w-2xl flex flex-col items-center md:items-start text-center md:text-left">             
+              <h1 className="text-2xl md:text-1xl tracking-widest mb-3">
+                Modalità degli incontri
+              </h1>
+              <div className="space-y-4 mb-4">
+                <motion.p
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.3 }}
+                  viewport={{ once: true }}
+                >
+                  Gli incontri si svolgono in presenza oppure online, in uno spazio riservato e dedicato.
                 </motion.p>                
                 <motion.p
                   initial={{ opacity: 0, y: 10 }}
@@ -150,25 +215,9 @@ export default function Home() {
                   transition={{ duration: 0.5, delay: 0.3 }}
                   viewport={{ once: true }}
                 >
-                  Mi occupo di counseling transpersonale, un approccio che considera la persona nella sua interezza: corpo, emozioni, psiche e dimensione simbolica.
-                </motion.p>               
-                <motion.p
-                  initial={{ opacity: 0, y: 10 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 0.3 }}
-                  viewport={{ once: true }}
-                >
-                  Il mio lavoro nasce da una vocazione profonda: usare la mia sensibilità per creare spazi di cura in cui ognuno possa ritrovare la propria direzione.
-                </motion.p>
+                  La modalità viene scelta insieme, in base alle esigenze.
+                </motion.p>              
               </div>
-              <motion.div
-                initial={{ opacity: 0, y: 10 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.5 }}
-                viewport={{ once: true }}
-              >
-                <ButtonLink text={'Un po’ di me'} href={'/chi-sono'}/>
-              </motion.div>
             </div>
           </div>
           <div className="hidden md:block"></div>        
@@ -180,7 +229,7 @@ export default function Home() {
       >
         <div className="relative z-20 flex flex-col items-center justify-center flex-grow gap-6 px-6 text-center">
           <h1 className="text-2xl md:text-1xl tracking-widest">
-            Io ci sono, tu ci sei
+            Se senti che può esserti utile
           </h1>                 
           <div className="space-y-2">
             <motion.p
@@ -189,7 +238,7 @@ export default function Home() {
               transition={{ duration: 0.6, delay: 0.4 }}
               viewport={{ once: true }}
             >
-              La direzione non nasce dal fare, ma dall’ascolto.
+              Possiamo incontrarci per un primo colloquio conoscitivo.
             </motion.p>           
             <motion.p
               initial={{ opacity: 0, y: 10 }}
@@ -197,7 +246,7 @@ export default function Home() {
               transition={{ duration: 0.6, delay: 0.4 }}
               viewport={{ once: true }}
             >
-              Qui trovi uno spazio dedicato a questo. Se senti che può esserti utile, scrivimi.
+              Scrivimi quando lo senti.
             </motion.p>
           </div>
           <motion.div
@@ -206,7 +255,7 @@ export default function Home() {
             transition={{ duration: 0.6, delay: 0.5 }}
             viewport={{ once: true }}
           >
-            <ButtonLink text={'Contattami'} href={'/faccio-lo-zero'} />
+            <ButtonLink text={'Contattami'} href={'/contattami'} />
           </motion.div>
         </div>
         <span className="relative z-20 pb-5 text-[10px] sm:text-sm font-bold text-black w-full text-center">
@@ -215,5 +264,4 @@ export default function Home() {
       </section>
     </main>
   );
-  
 }

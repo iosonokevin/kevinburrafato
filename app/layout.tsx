@@ -1,15 +1,15 @@
 import type { Metadata } from "next";
-import { Libre_Baskerville } from "next/font/google";
+import { Cormorant_Garamond } from 'next/font/google';
 import "./globals.css";
 
-const libreBaskerville = Libre_Baskerville({
-  subsets: ["latin"],
-  variable: "--font-libre-baskerville",
-  weight: ["400", "700"],
+const courierPrime = Cormorant_Garamond({
+  subsets: ['latin'],
+  weight: ['400', '700'],
+  variable: '--font-courier',
 });
 
 export const metadata: Metadata = {
-  title: "Kevin Burrafato - Archeologo di me stesso",
+  title: "Kevin Burrafato - Archeologi di noi stessi",
   description: "Counselor transpersonale. Accompagno chi vuole conoscersi in profondità.",
   verification: { google: "dWAiRPtDpjTQ3Z_sOJW8lrwrftW3bRkgUz0-b1qbpXs" },
 };
@@ -21,7 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="it">
-      <body className={`${libreBaskerville.variable} antialiased`}>
+      <body className={`${courierPrime.variable} antialiased`}>
         {children}
       </body>
     </html>

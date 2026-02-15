@@ -1,17 +1,11 @@
 import type { Metadata } from "next";
-import { Courier_Prime } from 'next/font/google';
-import localFont from 'next/font/local';
+import { Cormorant_Garamond } from 'next/font/google';
 import "./globals.css";
 
-const courierPrime = Courier_Prime({
+const courierPrime = Cormorant_Garamond({
   subsets: ['latin'],
   weight: ['400', '700'],
   variable: '--font-courier',
-});
-
-const biroScript = localFont({
-  src: '../public/fonts/BiroScriptPlus.woff2',
-  variable: '--font-biro',
 });
 
 export const metadata: Metadata = {
@@ -27,7 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="it">
-      <body className={`${courierPrime.variable} ${biroScript.variable} antialiased`}>
+      <body className={`${courierPrime.variable} antialiased`}>
         {children}
       </body>
     </html>

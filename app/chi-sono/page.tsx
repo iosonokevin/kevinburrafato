@@ -18,7 +18,7 @@ export default function ChiSono() {
       >
         <div className="absolute top-0 left-0 w-full h-full z-0">
           <Image
-            src="/sfondo_counseling_hero.PNG"
+            src="/sfondo_counseling_hero.png"
             alt="Hero background"
             fill
             className="object-cover"
@@ -86,7 +86,7 @@ export default function ChiSono() {
         </div>
       </section> 
       <section
-        className="snap-start h-[55vh] md:h-[90vh] relative flex flex-col items-center justify-center overflow-hidden"
+        className="snap-start h-[60vh] md:h-[90vh] relative flex flex-col items-center justify-center overflow-hidden"
         style={{ backgroundColor: '#F5F7F0' }}
       >
         <div className="relative z-20 w-full max-w-3xl px-6 flex flex-col items-center justify-center gap-8 pb-15">

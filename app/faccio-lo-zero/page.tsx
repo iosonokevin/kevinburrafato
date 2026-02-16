@@ -17,7 +17,7 @@ export default function Zero() {
       >
         <div className="absolute top-0 left-0 w-full h-full z-0">
           <Image
-            src="/sfondo_counseling_hero.PNG"
+            src="/sfondo_counseling_hero.png"
             alt="Hero background"
             fill
             className="object-cover"

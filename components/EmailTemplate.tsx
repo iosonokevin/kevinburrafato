@@ -19,7 +19,7 @@ export const EmailTemplate: React.FC<Readonly<EmailTemplateProps>> = ({
 
   return (
     <div style={{ fontFamily: 'Arial, sans-serif', padding: '20px', lineHeight: '1.6', color: '#333' }}>
-      <h2>{heading} – SolarcaTribe</h2>
+      <h2>{heading} – KevinBurrafato</h2>
       
       <table cellPadding={8} style={{ borderCollapse: 'collapse', marginTop: '20px' }}>
         <tbody>
@@ -39,7 +39,7 @@ export const EmailTemplate: React.FC<Readonly<EmailTemplateProps>> = ({
       </table>
 
       <p style={{ marginTop: '30px', fontSize: '0.9em', color: '#666' }}>
-        Questo messaggio è stato inviato tramite il modulo di contatto del sito SolarcaTribe.
+        Questo messaggio è stato inviato tramite il modulo di contatto del sito KevinBurrafato.
       </p>
     </div>
   );

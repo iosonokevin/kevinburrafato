@@ -255,7 +255,7 @@ export default function Percorso() {
             transition={{ duration: 0.6, delay: 0.5 }}
             viewport={{ once: true }}
           >
-            <ButtonLink text={'Contattami'} href={'/contattami'} />
+            <ButtonLink text={'Fissa un colloquio'} href={'/contattami'} />
           </motion.div>
         </div>
         <span className="relative z-20 pb-5 text-[10px] sm:text-sm font-bold text-black w-full text-center">

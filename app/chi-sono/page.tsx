@@ -35,10 +35,10 @@ export default function ChiSono() {
         <SidebarMenu isOpen={isMenuOpen} toggleMenu={() => setIsMenuOpen(false)} />
         <div className="relative z-20 flex flex-col items-center justify-center flex-grow gap-2 px-6">  
           <h1 className="hero-title text-3xl tracking-widest max-w-[85%] md:max-w-2xl text-center mx-auto mb-1">
-            Chi sono
+            Kevin Burrafato
           </h1>
           <h2 className="hero-title text-lg italic tracking-widest max-w-[85%] md:max-w-2xl text-center mx-auto">
-            Come archeologo di Sé, accompagno le persone a esplorare se stesse per ritrovare forza, direzione e autenticità, scoprendo che dentro di loro sanno già tutto
+            Counselor Transpersonale in formazione presso il training in Counseling Transpersonale c/o OM Verbania
           </h2>
         </div>
         <div className="relative z-20 pb-5 flex items-center"> 
@@ -118,7 +118,7 @@ export default function ChiSono() {
               transition={{ duration: 0.5, delay: 0.3 }}
               viewport={{ once: true }}
             >
-              È questo che faccio oggi nel mio lavoro di counselor.
+              Per me il counseling è questo.
             </motion.h1>             
           </div>
         </div>
@@ -141,7 +141,7 @@ export default function ChiSono() {
                   transition={{ duration: 0.5, delay: 0.3 }}
                   viewport={{ once: true }}
                 >
-                  Il mio modo di lavorare nasce dall’ascolto. Non dall’idea di aggiustare, ma dalla fiducia che ogni persona porta già dentro di sé ciò di cui ha bisogno.
+                  La mia pratica nasce dall’ascolto. Non dall’idea di aggiustare, ma dalla fiducia che ogni persona porta già dentro di sé ciò di cui ha bisogno.
                 </motion.p>
                 <motion.p
                   initial={{ opacity: 0, y: 10 }}
@@ -152,6 +152,14 @@ export default function ChiSono() {
                   Accompagno le persone a rallentare, a tornare al corpo, ad ascoltare ciò che sta chiedendo attenzione.
                 </motion.p>
               </div>
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.5 }}
+                viewport={{ once: true }}
+              >
+                <ButtonLink text={'Scopri il percorso'} href={'/percorso'}/>
+              </motion.div>
             </div>
           </div>
         </div>
@@ -192,6 +200,14 @@ export default function ChiSono() {
                   Il mio ruolo non è indicare una strada, ma accompagnare affinché ognuno possa riconoscere la propria.
                 </motion.p>
               </div>
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.5 }}
+                viewport={{ once: true }}
+              >
+                <ButtonLink text={'Ti accompagno così'} href={'/percorso'}/>
+              </motion.div>
             </div>
           </div>
           <div className="hidden md:block"></div>        

@@ -32,7 +32,8 @@ export default function SidebarMenu({ isOpen, toggleMenu }: Props) {
         <div className="h-full flex flex-col justify-center items-center space-y-6 text-lg font-medium">
           <Link href="/" className="hover:underline">Home</Link>
           <Link href="/chi-sono" className="hover:underline">Parlo di me</Link>
-          <Link href="/faccio-lo-zero" className="hover:underline">Faccio lo zero</Link>         
+          <Link href="/faccio-lo-zero" className="hover:underline">Faccio lo zero</Link>  
+          <Link href="/il-mio-approccio" className="hover:underline">Il mio approccio</Link>        
           <Link href="/percorso" className="hover:underline">Percorso</Link> 
           <Link href="/contattami" className="hover:underline">Contattami</Link>         
         </div>

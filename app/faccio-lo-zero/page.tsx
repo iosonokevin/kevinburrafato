@@ -4,67 +4,49 @@ import { MoveDown } from 'lucide-react';
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Typewriter from 'typewriter-effect';
+import ButtonLink from '@/components/PrimaryButton';
+import Header from '@/components/Header';
+import SidebarMenu from '@/components/SidebarMenu';
 
-export default function Home() {
-  const [phase, setPhase] = useState<'hero' | 'loading' | 'experience'>('hero');
+export default function FaccioLoZero() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [phase, setPhase] = useState<'hero' | 'loading' | 'experience' | 'final'>('hero');
   const [step, setStep] = useState(0);
   const [text, setText] = useState('');
 
   const questions = [
-    "Cosa sento? Dove lo sento?",
-    "Osserva senza cambiare nulla.",
-    "Quanto è intenso?",
-    "Lascia che sia.",
-    "Ha una forma?",
-    "Non giudicare.",
-    "Cambia se lo osservo?",
-    "Rimani con ciò che c’è."
+    "",
+    "Cosa sento nel corpo? Dove lo sento?",
+    "",
+    "Che forma ha? Che colore ha?",
+    "",
+    "Se potesse parlare, cosa mi direbbe?",
+    ""
   ];
 
   const reflections = [
-    [
-      "Non devo capire.",
-      "Non devo sistemare.",
-      "Non devo cambiare.",
-      "Posso solo osservare."
-    ],
-    [
-      "È solo una sensazione.",
-      "Non è un problema.",
-      "Non è un errore.",
-      "È esperienza."
-    ],
-    [
-      "Posso restare.",
-      "Posso sentire.",
-      "Posso accogliere.",
-      "Posso respirare."
-    ],
-    [
-      "Nulla da fare.",
-      "Nulla da risolvere.",
-      "Solo essere.",
-      "Qui."
-    ]
+    ["Sento il corpo che poggia.", "Sento il mio respiro.", "Sento i rumori esterni.", "Sento i miei pensieri."],
+    ["È una sensazione.", "Non è un problema.", "Non è un errore.", "È esperienza."],
+    ["Posso restare.", "Posso sentire.", "Posso accogliere.", "Posso respirare."],
+    ["Nulla da fare.", "Nulla da risolvere.", "Solo essere.", "Qui."]
   ];
 
-  const isReflectionStep = step % 2 === 1;
+  const isReflectionStep = step % 2 === 0;
   const reflectionIndex = Math.floor(step / 2);
 
   const handleStart = () => {
     if (phase === 'hero') {
       setPhase('loading');
-
       setTimeout(() => {
         setPhase('experience');
         setStep(0);
       }, 1200);
     } else if (phase === 'experience') {
-      if (step < 7) {
+      if (step < 6) {
         setStep(prev => prev + 1);
         setText('');
       } else {
-        console.log("Esperienza terminata");
+        setPhase('final');
       }
     }
   };
@@ -76,27 +58,37 @@ export default function Home() {
       {phase === 'hero' && (
         <motion.section
           key="hero"
-          className="relative w-full h-full flex flex-col items-center justify-center text-center px-8"
+          className="relative w-full h-full flex flex-col items-center overflow-hidden" // Aggiunto flex-col e overflow-hidden
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <h1 className="text-2xl sm:text-3xl mb-10">
-            <Typewriter
-              options={{ loop: true, delay: 40 }}
-              onInit={(typewriter) => {
-                typewriter
-                  .typeString('Vivere piuttosto che capire.')
-                  .pauseFor(1500)
-                  .deleteAll()
-                  .typeString('Osservare piuttosto che giudicare.')
-                  .pauseFor(1500)
-                  .deleteAll()
-                  .start();
-              }}
+          <div className="relative z-30 w-full">
+            <Header
+              toggleMenu={() => setIsMenuOpen((prev) => !prev)}
+              isMenuOpen={isMenuOpen}
+              isDark={true}
             />
-          </h1>
+          </div>
+          <SidebarMenu isOpen={isMenuOpen} toggleMenu={() => setIsMenuOpen(false)} />
+          <div className="relative z-20 flex flex-col items-center justify-center flex-grow px-8 text-center">
+            <h1 className="text-2xl sm:text-3xl mb-10">
+              <Typewriter
+                options={{ loop: true, delay: 40 }}
+                onInit={(typewriter) => {
+                  typewriter
+                    .typeString('Vivere piuttosto che capire.')
+                    .pauseFor(1500)
+                    .deleteAll()
+                    .typeString('Osservare piuttosto che giudicare.')
+                    .pauseFor(1500)
+                    .deleteAll()
+                    .start();
+                }}
+              />
+            </h1>
+          </div>
         </motion.section>
       )}
 
@@ -195,33 +187,58 @@ export default function Home() {
         </motion.section>
       )}
 
-      {/* BOTTONE */}
+      {/* 3. STEP FINALE */}
       <AnimatePresence>
-        {((phase === 'hero') ||
-          (phase === 'experience' && (!isReflectionStep ? text.length > 0 : true))) && (
+        {phase === 'final' && (
+          <motion.section
+            key="final"
+            className="flex flex-col items-center justify-center text-center px-8"
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h1 className="text-2xl md:text-1xl tracking-widest mb-3">
+              Questo può restare semplicemente un momento per te.
+            </h1>
+            <div className="mb-2"> 
+              <p className="text-1xl md:text-lg">
+                Se invece senti che desideri uno spazio di ascolto più profondo, io ci sono.
+              </p> 
+            </div>                    
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.5 }}
+              viewport={{ once: true }}
+            >
+              <ButtonLink text={'Scrivimi'} href={'/contattami'} />
+            </motion.div>
+          </motion.section>
+        )}
+      </AnimatePresence>
+
+      <AnimatePresence>
+        {phase !== 'final' && phase !== 'loading' && (
+          (phase === 'hero') || 
+          (phase === 'experience' && (!isReflectionStep ? text.length > 0 : true))
+        ) && (
           <motion.button
             onClick={handleStart}
-            className="absolute bottom-10 left-1/2 -translate-x-1/2 
-                       flex flex-col items-center 
-                       text-black hover:text-black/60 
-                       transition-colors duration-300 cursor-pointer"
+            className="absolute bottom-10 left-1/2 -translate-x-1/2 z-50 flex flex-col items-center text-black hover:text-black/60 transition-colors duration-300 cursor-pointer pointer-events-auto"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 20 }}
             whileHover={{ y: 4 }}
+            style={{ isolation: 'isolate' }} 
           >
             <span className="mb-1 text-sm">
-              {phase === 'hero'
-                ? 'Faccio lo zero'
-                : step < 7
-                  ? 'Resto'
-                  : 'Termino'}
+              {phase === 'hero' ? 'Faccio lo zero' : 'Resto'}
             </span>
             <MoveDown size={32} />
           </motion.button>
         )}
       </AnimatePresence>
-
     </div>
   );
 }

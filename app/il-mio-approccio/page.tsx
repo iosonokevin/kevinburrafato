@@ -7,11 +7,11 @@ import Header from '@/components/Header';
 import SidebarMenu from '@/components/SidebarMenu';
 import ButtonLink from '@/components/PrimaryButton';
 
-export default function ChiSono() {
+export default function IlMioApproccio() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <main className="h-screen">   
+    <main className="h-screen">     
       <section
         className="snap-start h-screen relative flex flex-col items-center overflow-hidden bg-transparent"
         style={{ height: '95vh' }}
@@ -35,24 +35,22 @@ export default function ChiSono() {
         <SidebarMenu isOpen={isMenuOpen} toggleMenu={() => setIsMenuOpen(false)} />
         <div className="relative z-20 flex flex-col items-center justify-center flex-grow gap-2 px-6">  
           <h1 className="hero-title text-3xl tracking-widest max-w-[85%] md:max-w-2xl text-center mx-auto mb-1">
-            Kevin Burrafato
+            Il mio approccio
           </h1>
           <h2 className="hero-title text-lg italic tracking-widest max-w-[85%] md:max-w-2xl text-center mx-auto">
-            Counselor Transpersonale in formazione presso il training in Counseling Transpersonale c/o OM Verbania
+            Da dove nasce il mio modo di accompagnare.
           </h2>
-        </div>
-        <div className="relative z-20 pb-5 flex items-center"> 
-        </div>      
-      </section> 
+        </div>     
+      </section>   
       <section
-        className="snap-start h-[50vh] md:h-[80vh] relative flex flex-col items-center justify-center overflow-hidden bg-transparent"
+        className="snap-start h-[80vh] md:h-screen relative flex flex-col items-center justify-center overflow-hidden bg-transparent"
         style={{ backgroundColor: '#F5F7F0' }}
       >
         <div className="relative z-20 w-full h-full flex flex-col items-center justify-center md:grid md:grid-cols-2">
           <div className="flex flex-col items-center justify-center px-6 md:px-20 w-full">
             <div className="max-w-2xl flex flex-col items-center md:items-start text-center md:text-left">             
               <h1 className="text-2xl md:text-1xl tracking-widest mb-3">
-                Archeologo di me stesso
+                Un modo ulteriore di guardare ciò che viviamo.
               </h1>
               <div className="space-y-4 mb-4">
                 <motion.p
@@ -61,15 +59,7 @@ export default function ChiSono() {
                   transition={{ duration: 0.5, delay: 0.3 }}
                   viewport={{ once: true }}
                 >
-                  Da bambino volevo fare <strong>l&apos;archeologo</strong>.
-                </motion.p>                
-                <motion.p
-                  initial={{ opacity: 0, y: 10 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 0.3 }}
-                  viewport={{ once: true }}
-                >
-                  Crescendo sentivo che non era quella la strada, eppure quell’immagine mi ha sempre accompagnato.
+                  La Biotransenergetica è un approccio che unisce psicologia, lavoro sul corpo e consapevolezza.
                 </motion.p>  
                 <motion.p
                   initial={{ opacity: 0, y: 10 }}
@@ -77,50 +67,20 @@ export default function ChiSono() {
                   transition={{ duration: 0.5, delay: 0.3 }}
                   viewport={{ once: true }}
                 >
-                  Solo più avanti ho compreso che parlava in modo simbolico: <strong>per me l’archeologia è esplorazione interiore</strong>.
+                  È nata dall’incontro tra la ricerca occidentale e pratiche più antiche legate all’esperienza diretta, ed è stata sviluppata da Pier Luigi Lattuada.
+                </motion.p>                
+                <motion.p
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.3 }}
+                  viewport={{ once: true }}
+                >
+                  Ma al di là delle definizioni, la cosa importante è questa: la vita è movimento, e <strong>quando qualcosa dentro di noi si blocca, iniziamo a soffrire</strong>.
                 </motion.p>              
               </div>
             </div>
           </div>
           <div className="hidden md:block"></div>        
-        </div>
-      </section> 
-      <section
-        className="snap-start h-[60vh] md:h-[90vh] relative flex flex-col items-center justify-center overflow-hidden"
-        style={{ backgroundColor: '#F5F7F0' }}
-      >
-        <div className="relative z-20 w-full max-w-3xl px-6 flex flex-col items-center justify-center gap-8 pb-15">
-          <div className="relative w-48 h-48 md:w-64 md:h-64 mb-3">
-            <Image 
-              src="/foto_profilo.jpg"
-              alt="Kevin Burrafato"
-              fill
-              className="object-cover rounded-full shadow-sm"
-              priority 
-            />
-          </div>
-          <div className="flex flex-col items-center text-center">   
-            <motion.h1
-              className="text-lg md:text-lg italic tracking-widest"
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.3 }}
-              viewport={{ once: true }}
-            >
-              Scavare nelle profondità, ritrovare bellezze sepolte e riportarle alla luce.
-            </motion.h1>             
-          </div>
-          <div className="flex flex-col items-center text-center"> 
-            <motion.h1
-              className="text-lg md:text-lg italic tracking-widest"
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.3 }}
-              viewport={{ once: true }}
-            >
-              Per me il counseling è questo.
-            </motion.h1>             
-          </div>
         </div>
       </section>
       <section
@@ -132,7 +92,7 @@ export default function ChiSono() {
           <div className="flex flex-col items-center justify-center px-6 md:px-20 w-full">
             <div className="max-w-2xl flex flex-col items-center md:items-start text-center md:text-left">             
               <h1 className="text-2xl md:text-1xl tracking-widest mb-3 leading-tight">
-                Il problema non si risolve, si dissolve.
+                Il flusso e il blocco
               </h1>
               <div className="space-y-4 mb-4">
                 <motion.p
@@ -141,7 +101,7 @@ export default function ChiSono() {
                   transition={{ duration: 0.5, delay: 0.3 }}
                   viewport={{ once: true }}
                 >
-                  Il mio approccio nasce dall’ascolto. Non dall’idea di aggiustare, ma dalla fiducia che <strong>ogni persona porta già dentro di sé ciò di cui ha bisogno</strong>.
+                  Pensa a quando trattieni un’emozione. Quando eviti un confronto. Quando rimani sempre nello stesso schema.
                 </motion.p>
                 <motion.p
                   initial={{ opacity: 0, y: 10 }}
@@ -149,17 +109,17 @@ export default function ChiSono() {
                   transition={{ duration: 0.5, delay: 0.3 }}
                   viewport={{ once: true }}
                 >
-                  Accompagno le persone a rallentare, a tornare al corpo, ad ascoltare ciò che sta chiedendo attenzione.
+                  <strong>È come se l’energia si fermasse</strong>.
+                </motion.p>
+                <motion.p
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.3 }}
+                  viewport={{ once: true }}
+                >
+                  La Biotransenergetica parte da qui: non dal “problema” da risolvere, ma dal punto in cui il flusso si è interrotto.
                 </motion.p>
               </div>
-              <motion.div
-                initial={{ opacity: 0, y: 10 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.5 }}
-                viewport={{ once: true }}
-              >
-                <ButtonLink text={'Scopri il percorso'} href={'/percorso'}/>
-              </motion.div>
             </div>
           </div>
         </div>
@@ -172,7 +132,39 @@ export default function ChiSono() {
           <div className="flex flex-col items-center justify-center px-6 md:px-20 w-full">
             <div className="max-w-2xl flex flex-col items-center md:items-start text-center md:text-left">             
               <h1 className="text-2xl md:text-1xl tracking-widest mb-3">
-                Il mio approccio.
+                Cerchio e Quadrato
+              </h1>
+              <div className="space-y-4 mb-4">               
+                <motion.p
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.3 }}
+                  viewport={{ once: true }}
+                >
+                  Ogni momento della nostra vita può essere visto come un equilibrio tra:
+                  <br /><br />
+                  • <strong>una forma</strong> (la situazione concreta, il corpo, le circostanze)
+                  <br />
+                  • <strong>un movimento</strong> (le emozioni, l’energia, la coscienza che si espande)
+                  <br /><br />
+                  Quando questo equilibrio si irrigidisce, nasce la sofferenza.
+                </motion.p>              
+              </div>
+            </div>
+          </div>
+          <div className="hidden md:block"></div>        
+        </div>
+      </section>
+      <section
+        className="snap-start h-[80vh] md:h-screen relative flex flex-col items-center justify-center overflow-hidden bg-transparent"
+        style={{ backgroundColor: '#E6E2D3' }}
+      >
+        <div className="relative z-20 w-full h-full flex flex-col items-center justify-center md:grid md:grid-cols-2">
+          <div className="hidden md:block"></div>
+          <div className="flex flex-col items-center justify-center px-6 md:px-20 w-full">
+            <div className="max-w-2xl flex flex-col items-center md:items-start text-center md:text-left">             
+              <h1 className="text-2xl md:text-1xl tracking-widest mb-3 leading-tight">
+                Non solo capire, ma fare esperienza
               </h1>
               <div className="space-y-4 mb-4">
                 <motion.p
@@ -181,7 +173,39 @@ export default function ChiSono() {
                   transition={{ duration: 0.5, delay: 0.3 }}
                   viewport={{ once: true }}
                 >
-                  Creo uno spazio sicuro in cui ciò che è già presente può emergere, prendere forma e trovare voce.
+                  Il punto non è cambiare la situazione esterna a tutti i costi. È entrare nel punto di rigidità e permettere che qualcosa si muova di nuovo.
+                </motion.p>
+                <motion.p
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.3 }}
+                  viewport={{ once: true }}
+                >
+                  Quando il movimento riprende, cambia lo stato di consapevolezza. E spesso <strong>ciò che sembrava un problema perde forza</strong>.
+                </motion.p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section
+        className="snap-start h-[80vh] md:h-screen relative flex flex-col items-center justify-center overflow-hidden bg-transparent"
+        style={{ backgroundColor: '#F5F7F0' }}
+      >
+        <div className="relative z-20 w-full h-full flex flex-col items-center justify-center md:grid md:grid-cols-2">
+          <div className="flex flex-col items-center justify-center px-6 md:px-20 w-full">
+            <div className="max-w-2xl flex flex-col items-center md:items-start text-center md:text-left">             
+              <h1 className="text-2xl md:text-1xl tracking-widest mb-3">
+                Oltre la parole
+              </h1>
+              <div className="space-y-4 mb-4">
+                <motion.p
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.3 }}
+                  viewport={{ once: true }}
+                >
+                  In questo approccio non ci si limita a parlare.
                 </motion.p>                
                 <motion.p
                   initial={{ opacity: 0, y: 10 }}
@@ -189,28 +213,61 @@ export default function ChiSono() {
                   transition={{ duration: 0.5, delay: 0.3 }}
                   viewport={{ once: true }}
                 >
-                  Utilizzo strumenti di ascolto profondo, sequenze di movimento corporeo e il contatto con forze archetipali, come modalità per fare chiarezza e ritrovare direzione.
-                </motion.p>               
+                  Si lavora attraverso respiro, consapevolezza, corpo, immaginazione guidata, esperienza diretta.
+                </motion.p>   
                 <motion.p
                   initial={{ opacity: 0, y: 10 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 0.3 }}
                   viewport={{ once: true }}
                 >
-                  Il mio ruolo non è indicare una strada, ma <strong>accompagnare affinché ognuno possa riconoscere la propria</strong>.
-                </motion.p>
+                  Non per “forzare” un cambiamento, ma per <strong>creare le condizioni in cui il cambiamento può avvenire</strong>.
+                </motion.p>            
               </div>
-              <motion.div
-                initial={{ opacity: 0, y: 10 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.5 }}
-                viewport={{ once: true }}
-              >
-                <ButtonLink text={'Ti accompagno così'} href={'/il-mio-approccio'}/>
-              </motion.div>
             </div>
           </div>
           <div className="hidden md:block"></div>        
+        </div>
+      </section>
+      <section
+        className="snap-start h-[80vh] md:h-screen relative flex flex-col items-center justify-center overflow-hidden bg-transparent"
+        style={{ backgroundColor: '#E6E2D3' }}
+      >
+        <div className="relative z-20 w-full h-full flex flex-col items-center justify-center md:grid md:grid-cols-2">
+          <div className="hidden md:block"></div>
+          <div className="flex flex-col items-center justify-center px-6 md:px-20 w-full">
+            <div className="max-w-2xl flex flex-col items-center md:items-start text-center md:text-left">             
+              <h1 className="text-2xl md:text-1xl tracking-widest mb-3 leading-tight">
+                Per chi è adatto
+              </h1>
+              <div className="space-y-4 mb-4">
+                <motion.p
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.3 }}
+                  viewport={{ once: true }}
+                >
+                  La Biotransenergetica può esserti utile se ti senti bloccato in uno schema che si ripete, vivi un momento di crisi o passaggio, senti che parlare non è sufficiente, vuoi un percorso che coinvolga anche il corpo, non solo la mente.
+                </motion.p>
+                <motion.p
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.3 }}
+                  viewport={{ once: true }}
+                >
+                  Non è necessario avere conoscenze spirituali o esperienze particolari. <strong>È un percorso di consapevolezza, radicato nella vita concreta</strong>.
+                </motion.p>
+                <motion.div
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.5 }}
+                  viewport={{ once: true }}
+                >
+                  <ButtonLink text={'Di più sul percorso'} href={'/percorso'} />
+                </motion.div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
       <section
@@ -228,7 +285,7 @@ export default function ChiSono() {
         </div>
         <div className="relative z-20 flex flex-col items-center justify-center flex-grow gap-6 px-6 text-center text-white"> 
           <h1 className="hero-title text-2xl md:text-3xl tracking-widest">
-            Io ci sono, tu ci sei
+            Non si tratta di analizzare il passato.
           </h1>                           
           <div className="space-y-4 max-w-2xl">
             <motion.p
@@ -238,7 +295,7 @@ export default function ChiSono() {
               viewport={{ once: true }}
               className="white"
             >
-              La direzione non nasce dal fare, ma dall’ascolto.
+              Si tratta di vivere ciò che è presente, fino in fondo.
             </motion.p>           
             <motion.p
               initial={{ opacity: 0, y: 10 }}
@@ -247,7 +304,7 @@ export default function ChiSono() {
               viewport={{ once: true }}
               className="white"
             >
-              Qui trovi uno spazio dedicato a questo. Se senti che può esserti utile, scrivimi.
+              La trasformazione avviene attraverso l’esperienza consapevole.
             </motion.p>
           </div>
           <motion.div
@@ -256,7 +313,7 @@ export default function ChiSono() {
             transition={{ duration: 0.6, delay: 0.8 }}
             viewport={{ once: true }}
           >
-            <ButtonLink text={'Contattami'} href={'/contattami'} variant="white" />
+            <ButtonLink text={'Scrivimi'} href={'/contattami'} variant="white"/>
           </motion.div>
         </div>
         <span className="relative z-20 pb-5 text-[10px] sm:text-sm font-bold text-white/70 w-full text-center">

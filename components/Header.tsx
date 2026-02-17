@@ -6,9 +6,10 @@ import Link from 'next/link';
 interface HeaderProps {
   toggleMenu: () => void;
   isMenuOpen: boolean;
+  isDark?: boolean;
 }
 
-export default function Header({ toggleMenu, isMenuOpen }: HeaderProps) {
+export default function Header({ toggleMenu, isMenuOpen, isDark = false }: HeaderProps) {
 
   return (
     <header className="absolute top-0 left-0 w-full px-8 sm:px-20 py-6 flex items-center justify-between z-20">
@@ -19,11 +20,11 @@ export default function Header({ toggleMenu, isMenuOpen }: HeaderProps) {
       >
         <Instagram 
           size={34}
-          className={`transition-colors duration-300 cursor-pointer text-white hover:text-[#536942]`} 
+          className={`transition-colors duration-300 cursor-pointer ${isDark ? 'text-black' : 'text-white'} hover:text-[#536942]`} 
           strokeWidth={1.2}
         />
       </Link>
-      <HamburgerButton isOpen={isMenuOpen} toggleMenu={toggleMenu} />      
+      <HamburgerButton isOpen={isMenuOpen} toggleMenu={toggleMenu} isDark={isDark}/>      
     </header>
   );
 }

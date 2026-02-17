@@ -14,7 +14,7 @@ export default function Percorso() {
     <main className="h-screen">     
       <section
         className="snap-start h-screen relative flex flex-col items-center overflow-hidden bg-transparent"
-        style={{ height: '90vh' }}
+        style={{ height: '95vh' }}
       >
         <div className="absolute top-0 left-0 w-full h-full z-0">
           <Image
@@ -67,7 +67,7 @@ export default function Percorso() {
                   transition={{ duration: 0.5, delay: 0.3 }}
                   viewport={{ once: true }}
                 >
-                  Non si tratta di risolvere qualcosa, ma di esplorare ciò che è già presente.
+                  Non si tratta di risolvere qualcosa, ma di <strong>esplorare ciò che è già presente</strong>.
                 </motion.p>              
               </div>
             </div>
@@ -109,7 +109,7 @@ export default function Percorso() {
                   transition={{ duration: 0.5, delay: 0.3 }}
                   viewport={{ once: true }}
                 >
-                  Non è necessario avere un problema preciso, basta il desiderio di ascoltarsi.
+                  Non è necessario avere un problema preciso, <strong>basta il desiderio di ascoltarsi</strong>.
                 </motion.p>
               </div>
             </div>
@@ -141,7 +141,7 @@ export default function Percorso() {
                   transition={{ duration: 0.5, delay: 0.3 }}
                   viewport={{ once: true }}
                 >
-                  Non sostituisce percorsi medici o psicoterapeutici, ma può affiancarsi come spazio di consapevolezza e crescita personale.
+                  Non sostituisce percorsi medici o psicoterapeutici, ma può affiancarsi come <strong>spazio di consapevolezza e crescita personale</strong>.
                 </motion.p>              
               </div>
             </div>
@@ -175,7 +175,7 @@ export default function Percorso() {
                   transition={{ duration: 0.5, delay: 0.3 }}
                   viewport={{ once: true }}
                 >
-                  Spesso si apre uno spazio di maggiore chiarezza, di contatto con le proprie risorse e di riconnessione con ciò che è autentico.
+                  Spesso <strong>si apre uno spazio di maggiore chiarezza</strong>, di contatto con le proprie risorse e di riconnessione con ciò che è autentico.
                 </motion.p>
                 <motion.p
                   initial={{ opacity: 0, y: 10 }}
@@ -198,7 +198,7 @@ export default function Percorso() {
           <div className="flex flex-col items-center justify-center px-6 md:px-20 w-full">
             <div className="max-w-2xl flex flex-col items-center md:items-start text-center md:text-left">             
               <h1 className="text-2xl md:text-1xl tracking-widest mb-3">
-                Modalità degli incontri
+                Non risolvere, ma attraversare
               </h1>
               <div className="space-y-4 mb-4">
                 <motion.p
@@ -207,7 +207,7 @@ export default function Percorso() {
                   transition={{ duration: 0.5, delay: 0.3 }}
                   viewport={{ once: true }}
                 >
-                  Gli incontri si svolgono in presenza oppure online, in uno spazio riservato e dedicato.
+                  Nelle sedute non andiamo a cercare una soluzione al problema, ma ci entriamo con presenza.
                 </motion.p>                
                 <motion.p
                   initial={{ opacity: 0, y: 10 }}
@@ -215,8 +215,16 @@ export default function Percorso() {
                   transition={{ duration: 0.5, delay: 0.3 }}
                   viewport={{ once: true }}
                 >
-                  La modalità viene scelta insieme, in base alle esigenze.
-                </motion.p>              
+                  Non combattiamo il blocco. Lo ascoltiamo. Lo attraversiamo. Con il corpo. Con l’esperienza diretta.
+                </motion.p>    
+                <motion.p
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.3 }}
+                  viewport={{ once: true }}
+                >
+                  Quando il blocco si scioglie, non è solo il problema a cambiare. <strong>Si entra in un nuovo stato di consapevolezza</strong>. E spesso, in quello spazio più ampio, ciò che prima sembrava un problema perde consistenza. Si dissolve.
+                </motion.p>          
               </div>
             </div>
           </div>
@@ -224,41 +232,43 @@ export default function Percorso() {
         </div>
       </section>
       <section
-        className="snap-start h-[80vh] md:h-screen relative flex flex-col items-center overflow-hidden"
+        className="snap-start h-[90vh] relative flex flex-col items-center overflow-hidden"
         style={{ backgroundColor: '#E6E2D3' }}
       >
-        <div className="relative z-20 flex flex-col items-center justify-center flex-grow gap-6 px-6 text-center">
-          <h1 className="text-2xl md:text-1xl tracking-widest">
+        <div className="absolute top-0 left-0 w-full h-full z-0">
+          <Image
+            src="/sfondo_banner_contatti.png"
+            alt="Background"
+            fill
+            className="object-cover"
+          />
+          <div className="absolute inset-0 bg-black opacity-70"></div>
+        </div>
+        <div className="relative z-20 flex flex-col items-center justify-center flex-grow gap-6 px-6 text-center text-white"> 
+          <h1 className="hero-title text-2xl md:text-3xl tracking-widest">
             Se senti che può esserti utile
-          </h1>                 
-          <div className="space-y-2">
+          </h1>                           
+          <div className="space-y-4 max-w-2xl">
             <motion.p
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
               viewport={{ once: true }}
+              className="white"
             >
               Possiamo incontrarci per un primo colloquio conoscitivo.
             </motion.p>           
-            <motion.p
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              viewport={{ once: true }}
-            >
-              Scrivimi quando lo senti.
-            </motion.p>
           </div>
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.5 }}
+            transition={{ duration: 0.6, delay: 0.8 }}
             viewport={{ once: true }}
           >
-            <ButtonLink text={'Fissa un colloquio'} href={'/contattami'} />
+            <ButtonLink text={'Scrivimi'} href={'/contattami'} variant="white"/>
           </motion.div>
         </div>
-        <span className="relative z-20 pb-5 text-[10px] sm:text-sm font-bold text-black w-full text-center">
+        <span className="relative z-20 pb-5 text-[10px] sm:text-sm font-bold text-white/70 w-full text-center">
           © 2026 Kevin Burrafato. Tutti i diritti riservati.
         </span>
       </section>

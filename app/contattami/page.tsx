@@ -54,7 +54,7 @@ export default function Contattami() {
     <main className="h-screen">     
       <section
         className="snap-start h-screen relative flex flex-col items-center overflow-hidden bg-transparent"
-        style={{ height: '90vh' }}
+        style={{ height: '95vh' }}
       >
         <div className="absolute top-0 left-0 w-full h-full z-0">
           <Image
@@ -193,6 +193,56 @@ export default function Contattami() {
           </motion.div>
         </div>
         <span className="relative z-20 pb-5 text-[10px] sm:text-sm font-bold text-black w-full text-center">
+          © 2026 Kevin Burrafato. Tutti i diritti riservati.
+        </span>
+      </section>
+      <section
+        className="snap-start h-[90vh] relative flex flex-col items-center overflow-hidden"
+        style={{ backgroundColor: '#E6E2D3' }}
+      >
+        <div className="absolute top-0 left-0 w-full h-full z-0">
+          <Image
+            src="/sfondo_banner_contatti.png"
+            alt="Background"
+            fill
+            className="object-cover"
+          />
+          <div className="absolute inset-0 bg-black opacity-70"></div>
+        </div>
+        <div className="relative z-20 flex flex-col items-center justify-center flex-grow gap-6 px-6 text-center text-white"> 
+          <h1 className="hero-title text-2xl md:text-3xl tracking-widest">
+            Io ci sono, tu ci sei
+          </h1>                           
+          <div className="space-y-4 max-w-2xl">
+            <motion.p
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              viewport={{ once: true }}
+              className="white"
+            >
+              La direzione non nasce dal fare, ma dall’ascolto.
+            </motion.p>           
+            <motion.p
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.6 }}
+              viewport={{ once: true }}
+              className="white"
+            >
+              Qui trovi uno spazio dedicato a questo. Se senti che può esserti utile, scrivimi.
+            </motion.p>
+          </div>
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <ButtonLink text={'Contattami'} href={'/faccio-lo-zero'} variant="white" />
+          </motion.div>
+        </div>
+        <span className="relative z-20 pb-5 text-[10px] sm:text-sm font-bold text-white/70 w-full text-center">
           © 2026 Kevin Burrafato. Tutti i diritti riservati.
         </span>
       </section>

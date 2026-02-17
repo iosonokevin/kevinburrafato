@@ -149,7 +149,7 @@ export default function FaccioLoZero() {
           transition={{ duration: 1 }}
         >
           {/* Titolo */}
-          <div className="pt-12 pb-6 text-center">
+          <div className="pt-6 pb-4 text-center">
             <AnimatePresence mode="wait">
               {!isReflectionStep && (
                 <motion.h2
@@ -268,7 +268,7 @@ export default function FaccioLoZero() {
           <motion.button
             key={`${phase}-${step}`}
             onClick={handleStart}
-            className="absolute bottom-10 left-1/2 -translate-x-1/2 z-50 flex flex-col items-center text-black hover:text-black/60 transition-colors duration-300 cursor-pointer pointer-events-auto"
+            className="absolute bottom-3 left-1/2 -translate-x-1/2 z-50 flex flex-col items-center text-black hover:text-black/60 transition-colors duration-300 cursor-pointer pointer-events-auto"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 20 }}

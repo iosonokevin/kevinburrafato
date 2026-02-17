@@ -170,7 +170,7 @@ export default function FaccioLoZero() {
           </div>
 
           {/* Contenuto centrale */}
-          <div className="flex-grow flex items-center justify-center pb-40">
+          <div className={`flex-grow flex items-center justify-center ${isReflectionStep ? 'pb-30' : 'pb-55'}`}>
             <AnimatePresence mode="wait">
               {!isReflectionStep ? (
                 <motion.div

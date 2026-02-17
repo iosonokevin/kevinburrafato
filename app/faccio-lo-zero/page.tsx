@@ -1,7 +1,7 @@
 'use client';
 
 import { MoveDown } from 'lucide-react';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Typewriter from 'typewriter-effect';
 import ButtonLink from '@/components/PrimaryButton';
@@ -10,9 +10,16 @@ import SidebarMenu from '@/components/SidebarMenu';
 
 export default function FaccioLoZero() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   const [phase, setPhase] = useState<'hero' | 'loading' | 'experience' | 'final'>('hero');
+
   const [step, setStep] = useState(0);
+
   const [text, setText] = useState('');
+
+  const [isTransitioning, setIsTransitioning] = useState(false);
+
+  const [showArrow, setShowArrow] = useState(false);
 
   const questions = [
     "",
@@ -34,22 +41,47 @@ export default function FaccioLoZero() {
   const isReflectionStep = step % 2 === 0;
   const reflectionIndex = Math.floor(step / 2);
 
+  useEffect(() => {
+  if (phase !== 'experience') return;
+
+  setShowArrow(false);
+
+  const reflection = step % 2 === 0;
+  const delay = reflection ? 2000 : 400;
+
+  const timer = setTimeout(() => {
+    setShowArrow(true);
+  }, delay);
+
+  return () => clearTimeout(timer);
+}, [step, phase]);
+
   const handleStart = () => {
+    setIsTransitioning(true);
+
     if (phase === 'hero') {
       setPhase('loading');
       setTimeout(() => {
         setPhase('experience');
         setStep(0);
+        setIsTransitioning(false);
       }, 1200);
     } else if (phase === 'experience') {
       if (step < 6) {
-        setStep(prev => prev + 1);
-        setText('');
+        setTimeout(() => {
+          setStep(prev => prev + 1);
+          setText('');
+          setIsTransitioning(false);
+        }, 300);
       } else {
-        setPhase('final');
+        setTimeout(() => {
+          setPhase('final');
+        }, 300);
       }
     }
   };
+
+  
 
   return (
     <div className="bg-white text-black h-screen flex items-center justify-center overflow-hidden">
@@ -139,7 +171,7 @@ export default function FaccioLoZero() {
           </div>
 
           {/* Contenuto centrale */}
-          <div className="flex-grow flex items-center justify-center pb-32">
+          <div className="flex-grow flex items-center justify-center pb-40">
             <AnimatePresence mode="wait">
               {!isReflectionStep ? (
                 <motion.div
@@ -159,6 +191,9 @@ export default function FaccioLoZero() {
                                focus:outline-none focus:ring-2 focus:ring-black 
                                resize-none"
                   />
+                  <p className="text-xs font-bold mt-3 text-center">
+                    Ciò che scrivi resta solo qui. Non viene salvato né condiviso.
+                  </p>
                 </motion.div>
               ) : (
                 <motion.div
@@ -219,26 +254,35 @@ export default function FaccioLoZero() {
       </AnimatePresence>
 
       <AnimatePresence>
-        {phase !== 'final' && phase !== 'loading' && (
-          (phase === 'hero') || 
-          (phase === 'experience' && (!isReflectionStep ? text.length > 0 : true))
-        ) && (
-          <motion.button
-            onClick={handleStart}
-            className="absolute bottom-10 left-1/2 -translate-x-1/2 z-50 flex flex-col items-center text-black hover:text-black/60 transition-colors duration-300 cursor-pointer pointer-events-auto"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: 20 }}
-            whileHover={{ y: 4 }}
-            style={{ isolation: 'isolate' }} 
-          >
-            <span className="mb-1 text-sm">
-              {phase === 'hero' ? 'Faccio lo zero' : 'Resto'}
-            </span>
-            <MoveDown size={32} />
-          </motion.button>
-        )}
-      </AnimatePresence>
+  {!isTransitioning &&
+    phase !== 'final' &&
+    phase !== 'loading' &&
+    (
+      phase === 'hero' ||
+      (
+        phase === 'experience' &&
+        showArrow &&
+        (!isReflectionStep ? text.length > 0 : true)
+      )
+    )
+  && (
+    <motion.button
+      key={`${phase}-${step}`}
+      onClick={handleStart}
+      className="absolute bottom-10 left-1/2 -translate-x-1/2 z-50 flex flex-col items-center text-black hover:text-black/60 transition-colors duration-300 cursor-pointer pointer-events-auto"
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: 20 }}
+      whileHover={{ y: 4 }}
+      style={{ isolation: 'isolate' }}
+    >
+      <span className="mb-1 text-sm">
+        {phase === 'hero' ? 'Faccio lo zero' : 'Resto'}
+      </span>
+      <MoveDown size={32} />
+    </motion.button>
+  )}
+</AnimatePresence>
     </div>
   );
 }

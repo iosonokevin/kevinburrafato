@@ -101,7 +101,7 @@ export default function ChiSono() {
           </div>
           <div className="flex flex-col items-center text-center">   
             <motion.h1
-              className="text-lg md:text-lg italic tracking-widest"
+              className="text-lg md:text-lg tracking-widest"
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.3 }}
@@ -112,13 +112,13 @@ export default function ChiSono() {
           </div>
           <div className="flex flex-col items-center text-center"> 
             <motion.h1
-              className="text-lg md:text-lg italic tracking-widest"
+              className="text-lg md:text-lg tracking-widest"
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.3 }}
               viewport={{ once: true }}
             >
-              Per me il counseling è questo.
+              È stato questo movimento a portarmi verso la formazione in counseling.
             </motion.h1>             
           </div>
         </div>

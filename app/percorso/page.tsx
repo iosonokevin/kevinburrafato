@@ -66,7 +66,7 @@ export default function Percorso() {
                   transition={{ duration: 0.5, delay: 0.3 }}
                   viewport={{ once: true }}
                 >
-                  Non si tratta di risolvere qualcosa, ma di <strong>esplorare ciò che è già presente</strong>.
+                  Non si tratta di risolvere qualcosa, ma di esplorare ciò che è già presente.
                 </motion.p>              
               </div>
             </div>
@@ -108,7 +108,7 @@ export default function Percorso() {
                   transition={{ duration: 0.5, delay: 0.3 }}
                   viewport={{ once: true }}
                 >
-                  Non è necessario avere un problema preciso, <strong>basta il desiderio di ascoltarsi</strong>.
+                  Non è necessario avere un problema preciso, basta il desiderio di ascoltarsi.
                 </motion.p>
               </div>
             </div>
@@ -140,7 +140,7 @@ export default function Percorso() {
                   transition={{ duration: 0.5, delay: 0.3 }}
                   viewport={{ once: true }}
                 >
-                  Non sostituisce percorsi medici o psicoterapeutici, ma può affiancarsi come <strong>spazio di consapevolezza e crescita personale</strong>.
+                  Non sostituisce percorsi medici o psicoterapeutici, ma può affiancarsi come spazio di consapevolezza e crescita personale.
                 </motion.p>              
               </div>
             </div>
@@ -174,7 +174,7 @@ export default function Percorso() {
                   transition={{ duration: 0.5, delay: 0.3 }}
                   viewport={{ once: true }}
                 >
-                  Spesso <strong>si apre uno spazio di maggiore chiarezza</strong>, di contatto con le proprie risorse e di riconnessione con ciò che è autentico.
+                  Spesso si apre uno spazio di maggiore chiarezza, di contatto con le proprie risorse e di riconnessione con ciò che è autentico.
                 </motion.p>
                 <motion.p
                   initial={{ opacity: 0, y: 10 }}
@@ -222,7 +222,7 @@ export default function Percorso() {
                   transition={{ duration: 0.5, delay: 0.3 }}
                   viewport={{ once: true }}
                 >
-                  Quando il blocco si scioglie, non è solo il problema a cambiare. <strong>Si entra in un nuovo stato di consapevolezza</strong>. E spesso, in quello spazio più ampio, ciò che prima sembrava un problema perde consistenza. Si dissolve.
+                  Quando il blocco si scioglie, non è solo il problema a cambiare. Si entra in un nuovo stato di consapevolezza. E spesso, in quello spazio più ampio, ciò che prima sembrava un problema perde consistenza. Si dissolve.
                 </motion.p>          
               </div>
             </div>
@@ -241,7 +241,7 @@ export default function Percorso() {
             fill
             className="object-cover"
           />
-          <div className="absolute inset-0 bg-black opacity-70"></div>
+          <div className="absolute inset-0 bg-black opacity-80"></div>
         </div>
         <div className="relative z-20 flex flex-col items-center justify-center flex-grow gap-6 px-6 text-center text-white"> 
           <h1 className="hero-title text-2xl md:text-3xl tracking-widest">

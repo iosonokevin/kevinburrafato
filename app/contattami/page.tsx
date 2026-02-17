@@ -167,11 +167,11 @@ export default function Contattami() {
             fill
             className="object-cover"
           />
-          <div className="absolute inset-0 bg-black opacity-70"></div>
+          <div className="absolute inset-0 bg-black opacity-80"></div>
         </div>
         <div className="relative z-20 flex flex-col items-center justify-center flex-grow gap-6 px-6 text-center text-white"> 
           <h1 className="hero-title text-2xl md:text-3xl tracking-widest">
-            Io ci sono, tu ci sei
+            La direzione nasce dall’ascolto
           </h1>                           
           <div className="space-y-4 max-w-2xl">
             <motion.p
@@ -181,7 +181,7 @@ export default function Contattami() {
               viewport={{ once: true }}
               className="white"
             >
-              La direzione non nasce dal fare, ma dall’ascolto.
+              Ogni percorso inizia da un primo gesto.
             </motion.p>           
             <motion.p
               initial={{ opacity: 0, y: 10 }}
@@ -190,7 +190,7 @@ export default function Contattami() {
               viewport={{ once: true }}
               className="white"
             >
-              Qui trovi uno spazio dedicato a questo. Se senti che può esserti utile, scrivimi.
+              Anche un piccolo passo è già un gesto di esplorazione.
             </motion.p>
           </div>
           <motion.div
@@ -199,7 +199,7 @@ export default function Contattami() {
             transition={{ duration: 0.6, delay: 0.8 }}
             viewport={{ once: true }}
           >
-            <ButtonLink text={'Contattami'} href={'/contattami'} variant="white" />
+            <ButtonLink text={'Faccio lo zero'} href={'/faccio-lo-zero'} variant="white" />
           </motion.div>
         </div>
         <span className="relative z-20 pb-5 text-[10px] sm:text-sm font-bold text-white/70 w-full text-center">

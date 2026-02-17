@@ -140,7 +140,7 @@ export default function ChiSono() {
                   transition={{ duration: 0.5, delay: 0.3 }}
                   viewport={{ once: true }}
                 >
-                  Il mio approccio nasce dall’ascolto. Non dall’idea di aggiustare, ma dalla fiducia che <strong>ogni persona porta già dentro di sé ciò di cui ha bisogno</strong>.
+                  Il mio approccio nasce dall’ascolto. Non dall’idea di aggiustare, ma dalla fiducia che ogni persona porta già dentro di sé ciò di cui ha bisogno.
                 </motion.p>
                 <motion.p
                   initial={{ opacity: 0, y: 10 }}
@@ -196,7 +196,7 @@ export default function ChiSono() {
                   transition={{ duration: 0.5, delay: 0.3 }}
                   viewport={{ once: true }}
                 >
-                  Il mio ruolo non è indicare una strada, ma <strong>accompagnare affinché ognuno possa riconoscere la propria</strong>.
+                  Il mio ruolo non è indicare una strada, ma accompagnare affinché ognuno possa riconoscere la propria.
                 </motion.p>
               </div>
               <motion.div
@@ -223,7 +223,7 @@ export default function ChiSono() {
             fill
             className="object-cover"
           />
-          <div className="absolute inset-0 bg-black opacity-70"></div>
+          <div className="absolute inset-0 bg-black opacity-80"></div>
         </div>
         <div className="relative z-20 flex flex-col items-center justify-center flex-grow gap-6 px-6 text-center text-white"> 
           <h1 className="hero-title text-2xl md:text-3xl tracking-widest">

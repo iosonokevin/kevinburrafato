@@ -109,10 +109,10 @@ export default function FaccioLoZero() {
                 options={{ loop: true, delay: 40 }}
                 onInit={(typewriter) => {
                   typewriter
-                    .typeString('Vivere piuttosto che capire.')
+                    .typeString('Intento piuttosto che obiettivo.')
                     .pauseFor(1500)
                     .deleteAll()
-                    .typeString('Osservare piuttosto che giudicare.')
+                    .typeString('Ho paura, eppure, ho fiducia.')
                     .pauseFor(1500)
                     .deleteAll()
                     .start();

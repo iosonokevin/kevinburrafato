@@ -59,7 +59,7 @@ export default function Home() {
                   transition={{ duration: 0.5, delay: 0.3 }}
                   viewport={{ once: true }}
                 >
-                  Serve <strong>fermarsi</strong>.
+                  Serve fermarsi.
                 </motion.p>                
                 <motion.p
                   initial={{ opacity: 0, y: 10 }}
@@ -67,7 +67,7 @@ export default function Home() {
                   transition={{ duration: 0.5, delay: 0.3 }}
                   viewport={{ once: true }}
                 >
-                  Ascoltare cosa sta chiedendo <strong>spazio</strong> dentro di noi.
+                  Ascoltare cosa sta chiedendo spazio dentro di noi.
                 </motion.p>               
               </div>
               <motion.div
@@ -101,7 +101,7 @@ export default function Home() {
                   transition={{ duration: 0.5, delay: 0.3 }}
                   viewport={{ once: true }}
                 >
-                  Accompagno le persone a tornare in <strong>ascolto</strong> di ciò che già esiste dentro di loro.
+                  Accompagno le persone a tornare in ascolto di ciò che già esiste dentro di loro.
                 </motion.p>
                 <motion.p
                   initial={{ opacity: 0, y: 10 }}
@@ -109,7 +109,7 @@ export default function Home() {
                   transition={{ duration: 0.5, delay: 0.3 }}
                   viewport={{ once: true }}
                 >
-                  Il corpo, il sentire, le immagini interiori diventano strumenti di <strong>orientamento</strong>.
+                  Il corpo, il sentire, le immagini interiori diventano strumenti di orientamento.
                 </motion.p>
               </div>
               <motion.div
@@ -149,7 +149,7 @@ export default function Home() {
                   transition={{ duration: 0.5, delay: 0.3 }}
                   viewport={{ once: true }}
                 >
-                  Mi occupo di <strong>counseling transpersonale</strong>, un approccio che considera la persona nella sua interezza: corpo, emozioni, psiche e dimensione simbolica.
+                  Mi occupo di counseling transpersonale, un approccio che considera la persona nella sua interezza: corpo, emozioni, psiche e dimensione simbolica.
                 </motion.p>               
                 <motion.p
                   initial={{ opacity: 0, y: 10 }}
@@ -191,7 +191,7 @@ export default function Home() {
                   transition={{ duration: 0.5, delay: 0.3 }}
                   viewport={{ once: true }}
                 >
-                  Il lavoro che propongo nasce da un approccio <strong>transpersonale</strong> e <strong>biotransenergetico</strong>.
+                  Il lavoro che propongo nasce da un approccio transpersonale e biotransenergetico.
                 </motion.p>
                 <motion.p
                   initial={{ opacity: 0, y: 10 }}
@@ -233,7 +233,7 @@ export default function Home() {
             fill
             className="object-cover"
           />
-          <div className="absolute inset-0 bg-black opacity-70"></div>
+          <div className="absolute inset-0 bg-black opacity-80"></div>
         </div>
         <div className="relative z-20 flex flex-col items-center justify-center flex-grow gap-6 px-6 text-center text-white"> 
           <h1 className="hero-title text-2xl md:text-3xl tracking-widest">

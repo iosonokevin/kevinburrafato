@@ -53,7 +53,7 @@ export default function Contattami() {
   return (
     <main className="h-screen">     
       <section
-        className="snap-start h-screen relative flex flex-col items-center overflow-hidden bg-transparent"
+        className="h-[85vh] md:h-[95vh] snap-start relative flex flex-col items-center overflow-hidden bg-transparent"
         style={{ height: '95vh' }}
       >
         <div className="absolute top-0 left-0 w-full h-full z-0">

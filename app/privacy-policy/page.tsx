@@ -11,8 +11,7 @@ export default function PrivacyPolicy() {
   return (
     <div className="bg-black text-white font-[family-name:var(--font-geist-sans)] relative">
       <section
-        className="snap-start h-screen relative flex flex-col items-center overflow-hidden bg-transparent"
-        style={{ height: '90vh' }}
+        className="h-[85vh] md:h-[95vh] snap-start relative flex flex-col items-center overflow-hidden bg-transparent"
       >
         <div className="absolute top-0 left-0 w-full h-full z-0">
           <Image

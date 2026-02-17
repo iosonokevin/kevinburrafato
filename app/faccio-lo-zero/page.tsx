@@ -9,6 +9,7 @@ import Header from '@/components/Header';
 import SidebarMenu from '@/components/SidebarMenu';
 
 export default function FaccioLoZero() {
+  
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const [phase, setPhase] = useState<'hero' | 'loading' | 'experience' | 'final'>('hero');
@@ -81,8 +82,6 @@ export default function FaccioLoZero() {
     }
   };
 
-  
-
   return (
     <div className="bg-white text-black h-screen flex items-center justify-center overflow-hidden">
 
@@ -90,7 +89,7 @@ export default function FaccioLoZero() {
       {phase === 'hero' && (
         <motion.section
           key="hero"
-          className="relative w-full h-full flex flex-col items-center overflow-hidden" // Aggiunto flex-col e overflow-hidden
+          className="relative w-full h-full flex flex-col items-center overflow-hidden"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
@@ -182,6 +181,9 @@ export default function FaccioLoZero() {
                   transition={{ duration: 0.6 }}
                   className="w-full max-w-2xl h-full"
                 >
+                  <p className="text-xs font-bold mt-3 text-center">
+                    Ciò che scrivi resta solo qui. Non viene salvato né condiviso.
+                  </p>
                   <textarea
                     value={text}
                     onChange={(e) => setText(e.target.value)}
@@ -191,9 +193,6 @@ export default function FaccioLoZero() {
                                focus:outline-none focus:ring-2 focus:ring-black 
                                resize-none"
                   />
-                  <p className="text-xs font-bold mt-3 text-center">
-                    Ciò che scrivi resta solo qui. Non viene salvato né condiviso.
-                  </p>
                 </motion.div>
               ) : (
                 <motion.div

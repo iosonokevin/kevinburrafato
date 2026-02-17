@@ -157,45 +157,6 @@ export default function Contattami() {
         </div>
       </section>
       <section
-        className="snap-start h-[80vh] md:h-screen relative flex flex-col items-center overflow-hidden"
-        style={{ backgroundColor: '#E6E2D3' }}
-      >
-        <div className="relative z-20 flex flex-col items-center justify-center flex-grow gap-6 px-6 text-center">
-          <h1 className="text-2xl md:text-1xl tracking-widest">
-            La direzione nasce dall’ascolto
-          </h1>                 
-          <div className="space-y-2">
-            <motion.p
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              viewport={{ once: true }}
-            >
-              Ogni percorso inizia da un primo gesto.
-            </motion.p>           
-            <motion.p
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              viewport={{ once: true }}
-            >
-              Anche un piccolo passo è già un gesto di esplorazione.
-            </motion.p>           
-          </div>
-          <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.5 }}
-            viewport={{ once: true }}
-          >
-            <ButtonLink text={'Faccio lo zero'} href={'/faccio-lo-zero'} />
-          </motion.div>
-        </div>
-        <span className="relative z-20 pb-5 text-[10px] sm:text-sm font-bold text-black w-full text-center">
-          © 2026 Kevin Burrafato. Tutti i diritti riservati.
-        </span>
-      </section>
-      <section
         className="snap-start h-[90vh] relative flex flex-col items-center overflow-hidden"
         style={{ backgroundColor: '#E6E2D3' }}
       >

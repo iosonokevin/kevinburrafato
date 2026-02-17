@@ -150,7 +150,7 @@ export default function FaccioLoZero() {
           transition={{ duration: 1 }}
         >
           {/* Titolo */}
-          <div className="pt-12 pb-8 text-center">
+          <div className="pt-12 pb-6 text-center">
             <AnimatePresence mode="wait">
               {!isReflectionStep && (
                 <motion.h2
@@ -169,9 +169,6 @@ export default function FaccioLoZero() {
               )}
             </AnimatePresence>
           </div>
-          <p className="text-xs font-bold text-center">
-            Ciò che scrivi resta solo qui. Non viene salvato né condiviso.
-          </p>
 
           {/* Contenuto centrale */}
           <div className="flex-grow flex items-center justify-center pb-40">
@@ -194,6 +191,9 @@ export default function FaccioLoZero() {
                                focus:outline-none focus:ring-2 focus:ring-black 
                                resize-none"
                   />
+                  <p className="text-xs font-bold mt-3 text-center">
+                    Ciò che scrivi resta solo qui. Non viene salvato né condiviso.
+                  </p>
                 </motion.div>
               ) : (
                 <motion.div

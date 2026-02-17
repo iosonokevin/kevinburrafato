@@ -42,19 +42,19 @@ export default function FaccioLoZero() {
   const reflectionIndex = Math.floor(step / 2);
 
   useEffect(() => {
-  if (phase !== 'experience') return;
+    if (phase !== 'experience') return;
 
-  setShowArrow(false);
+    setShowArrow(false);
 
-  const reflection = step % 2 === 0;
-  const delay = reflection ? 2000 : 400;
+    const reflection = step % 2 === 0;
+    const delay = reflection ? 2000 : 400;
 
-  const timer = setTimeout(() => {
-    setShowArrow(true);
-  }, delay);
+    const timer = setTimeout(() => {
+      setShowArrow(true);
+    }, delay);
 
-  return () => clearTimeout(timer);
-}, [step, phase]);
+    return () => clearTimeout(timer);
+  }, [step, phase]);
 
   const handleStart = () => {
     setIsTransitioning(true);
@@ -150,7 +150,7 @@ export default function FaccioLoZero() {
           transition={{ duration: 1 }}
         >
           {/* Titolo */}
-          <div className="pt-12 pb-6 text-center">
+          <div className="pt-12 pb-8 text-center">
             <AnimatePresence mode="wait">
               {!isReflectionStep && (
                 <motion.h2
@@ -169,6 +169,9 @@ export default function FaccioLoZero() {
               )}
             </AnimatePresence>
           </div>
+          <p className="text-xs font-bold text-center">
+            Ciò che scrivi resta solo qui. Non viene salvato né condiviso.
+          </p>
 
           {/* Contenuto centrale */}
           <div className="flex-grow flex items-center justify-center pb-40">
@@ -191,9 +194,6 @@ export default function FaccioLoZero() {
                                focus:outline-none focus:ring-2 focus:ring-black 
                                resize-none"
                   />
-                  <p className="text-xs font-bold mt-3 text-center">
-                    Ciò che scrivi resta solo qui. Non viene salvato né condiviso.
-                  </p>
                 </motion.div>
               ) : (
                 <motion.div
@@ -254,35 +254,35 @@ export default function FaccioLoZero() {
       </AnimatePresence>
 
       <AnimatePresence>
-  {!isTransitioning &&
-    phase !== 'final' &&
-    phase !== 'loading' &&
-    (
-      phase === 'hero' ||
-      (
-        phase === 'experience' &&
-        showArrow &&
-        (!isReflectionStep ? text.length > 0 : true)
-      )
-    )
-  && (
-    <motion.button
-      key={`${phase}-${step}`}
-      onClick={handleStart}
-      className="absolute bottom-10 left-1/2 -translate-x-1/2 z-50 flex flex-col items-center text-black hover:text-black/60 transition-colors duration-300 cursor-pointer pointer-events-auto"
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: 20 }}
-      whileHover={{ y: 4 }}
-      style={{ isolation: 'isolate' }}
-    >
-      <span className="mb-1 text-sm">
-        {phase === 'hero' ? 'Faccio lo zero' : 'Resto'}
-      </span>
-      <MoveDown size={32} />
-    </motion.button>
-  )}
-</AnimatePresence>
+        {!isTransitioning &&
+          phase !== 'final' &&
+          phase !== 'loading' &&
+          (
+            phase === 'hero' ||
+            (
+              phase === 'experience' &&
+              showArrow &&
+              (!isReflectionStep ? text.length > 0 : true)
+            )
+          )
+        && (
+          <motion.button
+            key={`${phase}-${step}`}
+            onClick={handleStart}
+            className="absolute bottom-10 left-1/2 -translate-x-1/2 z-50 flex flex-col items-center text-black hover:text-black/60 transition-colors duration-300 cursor-pointer pointer-events-auto"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 20 }}
+            whileHover={{ y: 4 }}
+            style={{ isolation: 'isolate' }}
+          >
+            <span className="mb-1 text-sm">
+              {phase === 'hero' ? 'Faccio lo zero' : 'Resto'}
+            </span>
+            <MoveDown size={32} />
+          </motion.button>
+        )}
+      </AnimatePresence>
     </div>
   );
 }

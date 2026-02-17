@@ -239,7 +239,7 @@ export default function Contattami() {
             transition={{ duration: 0.6, delay: 0.8 }}
             viewport={{ once: true }}
           >
-            <ButtonLink text={'Contattami'} href={'/faccio-lo-zero'} variant="white" />
+            <ButtonLink text={'Contattami'} href={'/contattami'} variant="white" />
           </motion.div>
         </div>
         <span className="relative z-20 pb-5 text-[10px] sm:text-sm font-bold text-white/70 w-full text-center">

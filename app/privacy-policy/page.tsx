@@ -11,32 +11,32 @@ export default function PrivacyPolicy() {
   return (
     <div className="bg-black text-white font-[family-name:var(--font-geist-sans)] relative">
       <section
-              className="snap-start h-screen relative flex flex-col items-center overflow-hidden bg-transparent"
-              style={{ height: '90vh' }}
-            >
-              <div className="absolute top-0 left-0 w-full h-full z-0">
-                <Image
-                  src="/sfondo_counseling_hero.png"
-                  alt="Hero background"
-                  fill
-                  className="object-cover"
-                  priority
-                />
-                <div className="absolute inset-0 bg-black opacity-50"></div>
-              </div>
-              <div className="relative z-30 w-full">
-                <Header
-                  toggleMenu={() => setIsMenuOpen((prev) => !prev)}
-                  isMenuOpen={isMenuOpen}
-                />
-              </div>
-              <SidebarMenu isOpen={isMenuOpen} toggleMenu={() => setIsMenuOpen(false)} /> 
-                <div className="relative z-20 flex flex-col items-center justify-center flex-grow gap-6 px-4">
-                          <h1 className="hero-title text-2xl md:text-3xl tracking-widest">
-                            Privacy Policy
-                          </h1>   
-                        </div>
-            </section>
+        className="snap-start h-screen relative flex flex-col items-center overflow-hidden bg-transparent"
+        style={{ height: '90vh' }}
+      >
+        <div className="absolute top-0 left-0 w-full h-full z-0">
+          <Image
+            src="/sfondo_counseling_hero.png"
+            alt="Hero background"
+            fill
+            className="object-cover"
+            priority
+          />
+          <div className="absolute inset-0 bg-black opacity-50"></div>
+        </div>
+        <div className="relative z-30 w-full">
+          <Header
+            toggleMenu={() => setIsMenuOpen((prev) => !prev)}
+            isMenuOpen={isMenuOpen}
+          />
+        </div>
+        <SidebarMenu isOpen={isMenuOpen} toggleMenu={() => setIsMenuOpen(false)} /> 
+          <div className="relative z-20 flex flex-col items-center justify-center flex-grow gap-6 px-4">
+                    <h1 className="hero-title text-2xl md:text-3xl tracking-widest">
+                      Privacy Policy
+                    </h1>   
+                  </div>
+      </section>
       <section className="bg-white text-black w-full py-20 px-6 sm:px-12">
         <div className="max-w-5xl mx-auto">
             <h2 className="text-3xl font-bold mb-6">Informativa sulla Privacy</h2>

@@ -76,7 +76,7 @@ export default function Contattami() {
           <h1 className="hero-title text-3xl tracking-widest max-w-[85%] md:max-w-2xl text-center mx-auto mb-1">
             Io ci sono
           </h1>
-          <h2 className="hero-title text-lg italic tracking-widest max-w-[85%] md:max-w-2xl text-center mx-auto">
+          <h2 className="hero-subtitle text-lg italic tracking-widest max-w-[85%] md:max-w-2xl text-center mx-auto">
             Puoi contattarmi per fare domande, capire se è il momento giusto di iniziare un percorso assieme, o semplicemente per parlare
           </h2>
         </div>     

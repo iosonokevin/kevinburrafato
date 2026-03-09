@@ -36,7 +36,7 @@ export default function Home() {
           <h1 className="hero-title text-2xl md:text-3xl tracking-widest">
             Vivere piuttosto che capire
           </h1>   
-          <h2 className="hero-title text-lg italic tracking-widest max-w-[85%] md:max-w-2xl text-center mx-auto">
+          <h2 className="hero-subtitle text-lg italic tracking-widest max-w-[85%] md:max-w-2xl text-center mx-auto">
             Scavare nelle profondità, riportare alla luce ciò che chiede spazio.
           </h2>  
           <ButtonLink text={'Scrivimi'} href={'/contattami'} variant="white"/>

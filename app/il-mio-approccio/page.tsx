@@ -36,7 +36,7 @@ export default function IlMioApproccio() {
           <h1 className="hero-title text-3xl tracking-widest max-w-[85%] md:max-w-2xl text-center mx-auto mb-1">
             Il mio approccio
           </h1>
-          <h2 className="hero-title text-lg italic tracking-widest max-w-[85%] md:max-w-2xl text-center mx-auto">
+          <h2 className="hero-subtitle text-lg italic tracking-widest max-w-[85%] md:max-w-2xl text-center mx-auto">
             Da dove nasce il mio modo di accompagnare.
           </h2>
         </div>     

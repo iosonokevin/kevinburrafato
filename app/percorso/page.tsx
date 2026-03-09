@@ -36,7 +36,7 @@ export default function Percorso() {
           <h1 className="hero-title text-3xl tracking-widest max-w-[85%] md:max-w-2xl text-center mx-auto mb-1">
             Il percorso di counseling
           </h1>
-          <h2 className="hero-title text-lg italic tracking-widest max-w-[85%] md:max-w-2xl text-center mx-auto">
+          <h2 className="hero-subtitle text-lg italic tracking-widest max-w-[85%] md:max-w-2xl text-center mx-auto">
             Un viaggio guidato per esplorare se stessi, ritrovare forza, direzione e autenticità
           </h2>
         </div>     

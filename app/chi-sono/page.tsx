@@ -36,7 +36,7 @@ export default function ChiSono() {
           <h1 className="hero-title text-3xl tracking-widest max-w-[85%] md:max-w-2xl text-center mx-auto mb-1">
             Kevin Burrafato
           </h1>
-          <h2 className="hero-title text-lg italic tracking-widest max-w-[85%] md:max-w-2xl text-center mx-auto">
+          <h2 className="hero-subtitle text-lg italic tracking-widest max-w-[85%] md:max-w-2xl text-center mx-auto">
             Counselor Transpersonale in formazione presso il training in Counseling Transpersonale c/o OM Verbania
           </h2>
         </div>

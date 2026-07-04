@@ -9,7 +9,7 @@ export default function Home() {
   const [started, setStarted] = useState(false);
 
   return (
-    <main className="relative h-screen overflow-hidden">
+    <main className="relative h-[100dvh] overflow-hidden">
       <div className="absolute inset-0 z-0">
         <Image
           src="/sfondo_counseling_hero.png"

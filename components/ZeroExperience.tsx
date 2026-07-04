@@ -141,7 +141,7 @@ export default function ZeroExperience() {
             transition={{ duration: 0.8 }}
             className="flex flex-col items-center gap-8 max-w-sm"
           >
-            <p className="white text-xl md:text-2xl leading-relaxed">
+            <p className="white text-base md:text-lg leading-relaxed">
               Se qualcosa si è mosso, e senti che vorresti parlarne, anche solo per fare due chiacchiere — scrivimi. Io ci sono.
             </p>
             <a

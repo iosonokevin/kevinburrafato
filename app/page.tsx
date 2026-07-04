@@ -28,7 +28,7 @@ export default function Home() {
             initial={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 1 }}
-            className="relative z-10 flex items-center justify-center min-h-screen px-14 py-12 md:px-6 md:py-12"
+            className="relative z-10 flex items-center justify-center min-h-screen px-14 py-16 md:px-6 md:py-12"
           >
             <div className="w-full max-w-5xl flex flex-col md:flex-row items-center justify-center gap-12 md:gap-24">
               <motion.div

@@ -1,13 +1,17 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond } from 'next/font/google';
-import 'vanilla-cookieconsent/dist/cookieconsent.css';
-import CookieConsentComponent from '@/components/CookieConsent';
+import { Cormorant_Garamond, DM_Sans } from 'next/font/google';
 import "./globals.css";
 
-const courierPrime = Cormorant_Garamond({
+const cormorant = Cormorant_Garamond({
   subsets: ['latin'],
   weight: ['400', '700'],
   variable: '--font-courier',
+});
+
+const dmSans = DM_Sans({
+  subsets: ['latin'],
+  weight: ['300', '400', '500'],
+  variable: '--font-dm-sans',
 });
 
 export const metadata: Metadata = {
@@ -23,9 +27,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="it">
-      <body className={`${courierPrime.variable} antialiased`}>
+      <body className={`${cormorant.variable} ${dmSans.variable} antialiased`}>
         {children}
-        <CookieConsentComponent />
       </body>
     </html>
   );

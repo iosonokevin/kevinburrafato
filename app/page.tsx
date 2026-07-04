@@ -1,278 +1,94 @@
 'use client';
 
 import React, { useState } from 'react';
-import ButtonLink from '../components/PrimaryButton';
-import { motion } from 'framer-motion';
-import Header from '@/components/Header';
-import SidebarMenu from '../components/SidebarMenu';
+import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
+import ZeroExperience from '../components/ZeroExperience';
 
 export default function Home() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  
+  const [started, setStarted] = useState(false);
+
   return (
-    <main className="h-screen">      
-      <section
-        className="h-[85vh] md:h-[95vh] snap-start relative flex flex-col items-center overflow-hidden bg-transparent"
-      >
-        <div className="absolute top-0 left-0 w-full h-full z-0">
-          <Image
-            src="/sfondo_counseling_hero.png"
-            alt="Hero background"
-            fill
-            className="object-cover"
-            priority
-          />
-          <div className="absolute inset-0 bg-black opacity-50"></div>
-        </div>
-        <div className="relative z-30 w-full">
-          <Header
-            toggleMenu={() => setIsMenuOpen((prev) => !prev)}
-            isMenuOpen={isMenuOpen}
-          />
-        </div>
-        <SidebarMenu isOpen={isMenuOpen} toggleMenu={() => setIsMenuOpen(false)} />
-        <div className="relative z-20 flex flex-col items-center justify-center flex-grow gap-6 px-4">
-          <h1 className="hero-title text-2xl md:text-3xl tracking-widest">
-            Vivere piuttosto che capire
-          </h1>   
-          <h2 className="hero-subtitle text-lg italic tracking-widest max-w-[85%] md:max-w-2xl text-center mx-auto">
-            Scavare nelle profondità, riportare alla luce ciò che chiede spazio.
-          </h2>  
-          <ButtonLink text={'Scrivimi'} href={'/contattami'} variant="white"/>
-        </div>    
-      </section>
-      <section
-        className="snap-start h-[80vh] md:h-screen relative flex flex-col items-center justify-center overflow-hidden bg-transparent"
-        style={{ backgroundColor: '#F5F7F0' }}
-      >
-        <div className="relative z-20 w-full h-full flex flex-col items-center justify-center md:grid md:grid-cols-2">
-          <div className="flex flex-col items-center justify-center px-6 md:px-20 w-full">
-            <div className="max-w-2xl flex flex-col items-center md:items-start text-center md:text-left">             
-              <h1 className="text-2xl md:text-1xl tracking-widest mb-3">
-                A volte non serve capire di più.
-              </h1>
-              <div className="space-y-4 mb-4">
-                <motion.p
-                  initial={{ opacity: 0, y: 10 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 0.3 }}
-                  viewport={{ once: true }}
-                >
-                  Serve fermarsi.
-                </motion.p>                
-                <motion.p
-                  initial={{ opacity: 0, y: 10 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 0.3 }}
-                  viewport={{ once: true }}
-                >
-                  Ascoltare cosa sta chiedendo spazio dentro di noi.
-                </motion.p>               
-              </div>
-              <motion.div
-                initial={{ opacity: 0, y: 10 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.5 }}
-                viewport={{ once: true }}
-              >
-                <ButtonLink text={'Prenditi un momento'} href={'/faccio-lo-zero'}/>
-              </motion.div>
-            </div>
-          </div>
-          <div className="hidden md:block"></div>        
-        </div>
-      </section>   
-      <section
-        className="snap-start h-[80vh] md:h-screen relative flex flex-col items-center justify-center overflow-hidden bg-transparent"
-        style={{ backgroundColor: '#E6E2D3' }}
-      >
-        <div className="relative z-20 w-full h-full flex flex-col items-center justify-center md:grid md:grid-cols-2">
-          <div className="hidden md:block"></div>
-          <div className="flex flex-col items-center justify-center px-6 md:px-20 w-full">
-            <div className="max-w-2xl flex flex-col items-center md:items-start text-center md:text-left">             
-              <h1 className="text-2xl md:text-1xl tracking-widest mb-3 leading-tight">
-                Il percorso è un processo, non una risposta.
-              </h1>
-              <div className="space-y-4 mb-4">
-                <motion.p
-                  initial={{ opacity: 0, y: 10 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 0.3 }}
-                  viewport={{ once: true }}
-                >
-                  Accompagno le persone a tornare in ascolto di ciò che già esiste dentro di loro.
-                </motion.p>
-                <motion.p
-                  initial={{ opacity: 0, y: 10 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 0.3 }}
-                  viewport={{ once: true }}
-                >
-                  Il corpo, il sentire, le immagini interiori diventano strumenti di orientamento.
-                </motion.p>
-              </div>
-              <motion.div
-                initial={{ opacity: 0, y: 10 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.5 }}
-                viewport={{ once: true }}
-              >
-                <ButtonLink text={'Scopri il percorso'} href={'/percorso'}/>
-              </motion.div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section
-        className="snap-start h-[80vh] md:h-screen relative flex flex-col items-center justify-center overflow-hidden bg-transparent"
-        style={{ backgroundColor: '#F5F7F0' }}
-      >
-        <div className="relative z-20 w-full h-full flex flex-col items-center justify-center md:grid md:grid-cols-2">
-          <div className="flex flex-col items-center justify-center px-6 md:px-20 w-full">
-            <div className="max-w-2xl flex flex-col items-center md:items-start text-center md:text-left">             
-              <h1 className="text-2xl md:text-1xl tracking-widest mb-3">
-                Due parole su di me.
-              </h1>
-              <div className="space-y-4 mb-4">
-                <motion.p
-                  initial={{ opacity: 0, y: 10 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 0.3 }}
-                  viewport={{ once: true }}
-                >
-                  Mi chiamo <strong>Kevin Burrafato</strong>.
-                </motion.p>                
-                <motion.p
-                  initial={{ opacity: 0, y: 10 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 0.3 }}
-                  viewport={{ once: true }}
-                >
-                  Mi occupo di counseling transpersonale, un approccio che considera la persona nella sua interezza: corpo, emozioni, psiche e dimensione simbolica.
-                </motion.p>               
-                <motion.p
-                  initial={{ opacity: 0, y: 10 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 0.3 }}
-                  viewport={{ once: true }}
-                >
-                  Il mio lavoro nasce da una vocazione profonda: usare la mia sensibilità per creare spazi di cura in cui ognuno possa ritrovare la propria direzione.
-                </motion.p>
-              </div>
-              <motion.div
-                initial={{ opacity: 0, y: 10 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.5 }}
-                viewport={{ once: true }}
-              >
-                <ButtonLink text={'Un po’ di me'} href={'/chi-sono'}/>
-              </motion.div>
-            </div>
-          </div>
-          <div className="hidden md:block"></div>        
-        </div>
-      </section>
-      <section
-        className="snap-start h-[80vh] md:h-screen relative flex flex-col items-center justify-center overflow-hidden bg-transparent"
-        style={{ backgroundColor: '#E6E2D3' }}
-      >
-        <div className="relative z-20 w-full h-full flex flex-col items-center justify-center md:grid md:grid-cols-2">
-          <div className="hidden md:block"></div>
-          <div className="flex flex-col items-center justify-center px-6 md:px-20 w-full">
-            <div className="max-w-2xl flex flex-col items-center md:items-start text-center md:text-left">             
-              <h1 className="text-2xl md:text-1xl tracking-widest mb-3 leading-tight">
-                Un ascolto che include tutto
-              </h1>
-              <div className="space-y-4 mb-4">
-                <motion.p
-                  initial={{ opacity: 0, y: 10 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 0.3 }}
-                  viewport={{ once: true }}
-                >
-                  Il lavoro che propongo nasce da un approccio transpersonale e biotransenergetico.
-                </motion.p>
-                <motion.p
-                  initial={{ opacity: 0, y: 10 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 0.3 }}
-                  viewport={{ once: true }}
-                >
-                  Entrare in contatto con ciò che è vivo dentro di noi, anche quando è scomodo, confuso, non chiaro.
-                </motion.p>
-                <motion.p
-                  initial={{ opacity: 0, y: 10 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 0.3 }}
-                  viewport={{ once: true }}
-                >
-                  Lasciare che il corpo parli prima della mente. Lasciare che l’esperienza apra spazi nuovi, invece di riempirli di spiegazioni.
-                </motion.p>                
-              </div>
-              <motion.div
-                initial={{ opacity: 0, y: 10 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.5 }}
-                viewport={{ once: true }}
-              >
-                <ButtonLink text={'Il mio approccio'} href={'/il-mio-approccio'}/>
-              </motion.div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section
-        className="snap-start h-[90vh] relative flex flex-col items-center overflow-hidden"
-        style={{ backgroundColor: '#E6E2D3' }}
-      >
-        <div className="absolute top-0 left-0 w-full h-full z-0">
-          <Image
-            src="/sfondo_banner_contatti.png"
-            alt="Background"
-            fill
-            className="object-cover"
-          />
-          <div className="absolute inset-0 bg-black opacity-80"></div>
-        </div>
-        <div className="relative z-20 flex flex-col items-center justify-center flex-grow gap-6 px-6 text-center text-white"> 
-          <h1 className="hero-title text-2xl md:text-3xl tracking-widest">
-            Io ci sono, tu ci sei
-          </h1>                           
-          <div className="space-y-4 max-w-2xl">
-            <motion.p
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              viewport={{ once: true }}
-              className="white"
-            >
-              La direzione non nasce dal fare, ma dall’ascolto.
-            </motion.p>           
-            <motion.p
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.6 }}
-              viewport={{ once: true }}
-              className="white"
-            >
-              Qui trovi uno spazio dedicato a questo. Se senti che può esserti utile, scrivimi.
-            </motion.p>
-          </div>
+    <main className="relative min-h-screen overflow-hidden">
+      <div className="absolute inset-0 z-0">
+        <Image
+          src="/sfondo_counseling_hero.png"
+          alt=""
+          fill
+          className="object-cover"
+          priority
+        />
+        <div className="absolute inset-0 bg-black/70" />
+      </div>
+
+      <AnimatePresence mode="wait">
+        {!started ? (
           <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.8 }}
-            viewport={{ once: true }}
+            key="home"
+            initial={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 1 }}
+            className="relative z-10 flex items-center justify-center min-h-screen px-14 py-12 md:px-6 md:py-12"
           >
-            <ButtonLink text={'Contattami'} href={'/contattami'} variant="white" />
+            <div className="w-full max-w-5xl flex flex-col md:flex-row items-center justify-center gap-12 md:gap-24">
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.8 }}
+                className="w-[240px] md:w-[320px] flex-shrink-0 aspect-[3/4] relative"
+              >
+                <Image
+                  src="/foto_profilo_2.jpg"
+                  alt="Kevin Burrafato"
+                  fill
+                  className="object-cover"
+                  priority
+                />
+              </motion.div>
+              <div className="flex flex-col items-center gap-8 w-full md:w-auto">
+                <motion.div
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.4 }}
+                  className="space-y-5 w-full md:max-w-xs text-justify text-[0.88rem] md:text-[1.05rem]"
+                >
+                  <p className="white">
+                    Una volta qualcuno mi raccontò di quando andò dai nativi americani per la sua prima cerimonia.
+                  </p>
+                  <p className="white">
+                    Prima che iniziasse prese il taccuino e cominciò a prendere appunti. I nativi risero, e gli dissero: &quot;Prima prova. Poi senti. E poi, forse, capisci qualcosa.&quot;
+                  </p>
+                  <p className="white">
+                    Ti invito a fare lo stesso &mdash; con una variazione sola: prova, senti, e lascia andare il voler capire.
+                  </p>
+                </motion.div>
+                <motion.div
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.7 }}
+                >
+                  <button
+                    onClick={() => setStarted(true)}
+                    className="inline-block px-6 py-2 border rounded-full transition-all duration-300 cursor-pointer text-white border-white bg-transparent hover:text-black hover:bg-white"
+                  >
+                    Entra
+                  </button>
+                </motion.div>
+              </div>
+            </div>
           </motion.div>
-        </div>
-        <span className="relative z-20 pb-5 text-[10px] sm:text-sm font-bold text-white/70 w-full text-center">
-          © 2026 Kevin Burrafato. Tutti i diritti riservati.
-        </span>
-      </section>
+        ) : (
+          <motion.div
+            key="experience"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1.2 }}
+            className="relative z-10"
+          >
+            <ZeroExperience />
+          </motion.div>
+        )}
+      </AnimatePresence>
     </main>
   );
-  
 }

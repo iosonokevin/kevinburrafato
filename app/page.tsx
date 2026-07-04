@@ -56,7 +56,7 @@ export default function Home() {
                     Una volta qualcuno mi raccontò di quando andò dai nativi americani per la sua prima cerimonia.
                   </p>
                   <p className="white">
-                    Prima che iniziasse prese il taccuino e cominciò a prendere appunti. I nativi risero, e gli dissero: &quot;Prima prova. Poi senti. E poi, forse, capisci qualcosa.&quot;
+                    Prima che iniziasse, prese il taccuino e cominciò a prendere appunti. I nativi risero, e gli dissero: &quot;Prima prova. Poi senti. E poi, forse, ci capisci qualcosa.&quot;
                   </p>
                   <p className="white">
                     Ti invito a fare lo stesso &mdash; con una variazione sola: prova, senti, e lascia andare il voler capire.

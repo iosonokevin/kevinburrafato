@@ -35,7 +35,7 @@ export default function Home() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.8 }}
-                className="w-[210px] md:w-[320px] flex-shrink-0 aspect-[3/4] relative"
+                className="w-[185px] md:w-[320px] flex-shrink-0 aspect-[3/4] relative"
               >
                 <Image
                   src="/foto_profilo_2.jpg"
